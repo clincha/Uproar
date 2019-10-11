@@ -2,6 +2,7 @@ package com.uproar.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * @author Angus Clinch
@@ -10,9 +11,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class mainController {
 
-  @GetMapping("/")
-  public String homepage() {
-    return "Angus";
+  @GetMapping("/hello")
+  public ModelAndView homepage() {
+    return new ModelAndView("index");
   }
 
 }
