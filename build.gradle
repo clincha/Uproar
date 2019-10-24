@@ -24,8 +24,4 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    compile group: 'org.springframework.security', name: 'spring-security-core', version: "4.2.3.RELEASE"
-    compile group: 'org.springframework.security', name: 'spring-security-web', version: "4.2.3.RELEASE"
-    compile group: 'org.springframework.security', name: 'spring-security-config', version: "4.2.3.RELEASE"
-    compile group: 'org.springframework.security.extensions' , name: 'spring-security-saml2-core' , version : "1.0.2.RELEASE"
 }
