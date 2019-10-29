@@ -29,6 +29,7 @@
             <div class="logo">
                 UpRoar
             </div>
+
             <div class="menu">
                 <ul>
                     <li><a href="mytickets">My Tickets</a></li>
