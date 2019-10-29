@@ -7,14 +7,14 @@ html, body {
 }
 
 body {
-    font-family: "Helvetica Neue",sans-serif;
+    font-family: "Helvetica Neue", sans-serif;
     font-weight: lighter;
 }
 
 header {
     width: 100%;
     height: 100vh;
-    background: url("BG.jpg") no-repeat 50% 50%;
+    background: url("../image/BG.jpg") no-repeat 50% 50%;
     background-size: cover;
 }
 
@@ -82,8 +82,6 @@ nav ul li a {
     display: none;
 }
 
-/*search bar*/
-}
 .container {
     position: relative;
     margin: calc(75px + 2vh + 2vw) auto 0 auto;
@@ -91,6 +89,7 @@ nav ul li a {
     width: 100%;
     max-width: 840px;
 }
+
 .search-box {
     position: relative;
     width: 100%;
@@ -99,6 +98,7 @@ nav ul li a {
     border-radius: 120px;
     margin: 0 auto;
 }
+
 .search-icon, .go-icon {
     position: absolute;
     top: 0;
@@ -107,6 +107,7 @@ nav ul li a {
     line-height: 61px;
     text-align: center;
 }
+
 .search-icon {
     left: 0;
     pointer-events: none;
@@ -125,12 +126,14 @@ nav ul li a {
     -moz-transition: transform 400ms 220ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
     -o-transition: transform 400ms 220ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
 }
+
 .si-rotate {
     transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
 }
+
 .go-icon {
     right: 0;
     pointer-events: none;
@@ -147,6 +150,7 @@ nav ul li a {
     -moz-transition: opacity 190ms ease-out, transform 260ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
     -o-transition: opacity 190ms ease-out, transform 260ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
 }
+
 .go-in {
     opacity: 1;
     pointer-events: all;
@@ -160,18 +164,21 @@ nav ul li a {
     -moz-transition: opacity 190ms ease-out, transform 260ms 20ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
     -o-transition: opacity 190ms ease-out, transform 260ms 20ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
 }
+
 .search-border {
     display: block;
     width: 100%;
     max-width: 360px;
     height: 60px;
 }
+
 .border {
     fill: none;
     stroke: #691fe6;
     stroke-width: 5;
     stroke-miterlimit: 10;
 }
+
 .border {
     stroke-dasharray: 740;
     stroke-dashoffset: 0;
@@ -180,6 +187,7 @@ nav ul li a {
     -moz-transition: stroke-dashoffset 400ms cubic-bezier(0.600, 0.040, 0.735, 0.990);
     -o-transition: stroke-dashoffset 400ms cubic-bezier(0.600, 0.040, 0.735, 0.990);
 }
+
 .border-searching .border {
     stroke-dasharray: 740;
     stroke-dashoffset: 459;
@@ -188,6 +196,7 @@ nav ul li a {
     -moz-transition: stroke-dashoffset 650ms cubic-bezier(0.755, 0.150, 0.205, 1.000);
     -o-transition: stroke-dashoffset 650ms cubic-bezier(0.755, 0.150, 0.205, 1.000);
 }
+
 #search {
     font-family: 'Montserrat Alternates', sans-serif;
     position: absolute;
@@ -197,7 +206,7 @@ nav ul li a {
     height: 100%;
     border-radius: 120px;
     border: none;
-    background: rgba(255,255,255,0);
+    background: rgba(255, 255, 255, 0);
     padding: 0 68px 0 68px;
     color: #691fe6;
     font-size: 1.32em;
@@ -205,20 +214,35 @@ nav ul li a {
     letter-spacing: -0.015em;
     outline: none;
 }
-#search::-webkit-input-placeholder {color: #691fe6;}
-#search::-moz-placeholder {color: #691fe6;}
-#search:-ms-input-placeholder {color: #691fe6;}
-#search:-moz-placeholder {color: #691fe6;}
-#search::-moz-selection {color: #691fe6; background: rgba(0,0,0,0.25);}
-#search::selection {color: #691fe6; background: rgba(0,0,0,0.25);}
+
+#search::-webkit-input-placeholder {
+    color: #691fe6;
+}
+
+#search::-moz-placeholder {
+    color: #691fe6;
+}
+
+#search:-ms-input-placeholder {
+    color: #691fe6;
+}
+
+#search:-moz-placeholder {
+    color: #691fe6;
+}
+
+#search::-moz-selection {
+    color: #691fe6;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+#search::selection {
+    color: #691fe6;
+    background: rgba(0, 0, 0, 0.25);
+}
 
 
-
-
-
-
-@media(max-width: 1500px) {
-
+@media (max-width: 1500px) {
     .logo {
         position: fixed;
         top: 0;
@@ -227,7 +251,7 @@ nav ul li a {
     }
 
     nav ul {
-        max-height: 0px;
+        max-height: 0;
         background: #340949;
     }
 
@@ -249,5 +273,4 @@ nav ul li a {
     .menu-icon {
         display: block;
     }
-
-   /* SEARCH BOX CSS*/
+}
