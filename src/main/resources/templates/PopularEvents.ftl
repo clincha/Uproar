@@ -1,6 +1,10 @@
 <#--This is the View that will contain the cards for the popular now -->
 <#import "header.ftl" as header>
-<@header.header></@header.header>
+<div class="head">
+    <@header.header></@header.header>
+</div>
+
+
 
 <link rel="stylesheet" href="css/PopularEvents.css">
 

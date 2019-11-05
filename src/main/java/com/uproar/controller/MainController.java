@@ -14,7 +14,7 @@ public class MainController {
   @GetMapping("/")
   public ModelAndView homepage() {
 
-    return new ModelAndView("header");
+    return new ModelAndView("PopularEvents");
   }
 
 
