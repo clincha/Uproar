@@ -79,7 +79,7 @@
 </div>
 
     <a href="events">
-        <div class="p1"> Explore more..</div>
+        <div class="p2"> <i>Explore more..</i></div>
     </a>
 
 

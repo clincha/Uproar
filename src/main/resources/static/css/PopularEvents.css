@@ -15,6 +15,16 @@
     padding-left: 5%;
     color: black;
 }
+
+.p2{
+    font-size: 50px;
+    padding-left: 5%;
+    color: black;
+    float: right;
+    padding-right: 5%;
+
+
+}
 .card1 {
     grid-column: 1;
     grid-row: 1;
@@ -39,6 +49,7 @@
     grid-column: 3;
     grid-row: 2;
 }
+
 
 @media (max-width: 1100px) {
 
