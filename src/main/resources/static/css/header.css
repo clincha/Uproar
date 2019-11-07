@@ -13,6 +13,11 @@ body {
     font-weight: lighter;
 }
 
+h1 {
+    color: white;
+}
+
+
 header {
     width: 100%;
     height: 70vh;
