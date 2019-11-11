@@ -1,12 +1,13 @@
 <#--This is the View that will contain the cards for the popular now -->
 <#import "header.ftl" as header>
+<#import "social.ftl" as social>
 <div class="head">
     <@header.header></@header.header>
 </div>
 
 
 
-<link rel="stylesheet" href="css/PopularEvents.css">
+<link rel="stylesheet" href="../static/css/login.css">
 
 <body>
 <div class="p1">
@@ -81,7 +82,9 @@
     <a href="events">
         <div class="p2"> <i>Explore more..</i></div>
     </a>
-
-
-
+<footer>
+<div class="socialposition">
+    <br>
+    <@social.social></@social.social></div>
+</footer>
 </body>
