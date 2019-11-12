@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-
+    <script src="js/script.js"></script>
 
 
 </head>
@@ -47,7 +47,7 @@
     <body>
 
 
-    <script src="js/script.js"></script>
+
     </body>
 
 </#macro>

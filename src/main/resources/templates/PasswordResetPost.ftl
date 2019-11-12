@@ -21,24 +21,9 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-9 col-lg-8 mx-auto">
-                                    <h3 class="login-heading mb-4">Create Account</h3>
+                                    <h3 class="login-heading mb-4">Enter your new Password.</h3>
                                     <form>
-                                        <div class="form-label-group">
-                                            <input type="text" id="InputName" class="form-control" placeholder="First Name" required autofocus>
-                                            <label for="InputName">First Name</label>
-                                        </div>
-                                        <div class="form-label-group">
-                                            <input type="text" id="InputSurname" class="form-control" placeholder="Surname" required autofocus>
-                                            <label for="InputSurname"> Surname</label>
-                                        </div>
 
-
-                                        <div class="form-label-group">
-                                            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                                            <label for="inputEmail">Email address</label>
-                                        </div>
-                                        <br>
-                                        <br>
                                         <div class="form-label-group">
                                             <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
                                             <label for="inputPassword">Password</label>
@@ -47,25 +32,23 @@
                                             <input type="password" id="inputPasswordAgain" class="form-control" placeholder="Confirm Password" required>
                                             <label for="inputPasswordAgain">Confirm Password</label>
                                         </div>
-
-
-                                        <button class="btn btn-lg btn-info btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Create Account</button>
+                                        <button class="btn btn-lg btn-info btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Reset Password</button>
 
 
 
-                                </form>
+                                    </form>
 
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-    </div><div class="foot">
+        </div><div class="foot">
             <a href="/"> <h1 >UpRoar</h1></a>
         </div>
-</div>
+    </div>
 </div>
 
 </body>

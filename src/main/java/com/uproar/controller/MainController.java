@@ -14,7 +14,7 @@ public class MainController {
   @GetMapping("/")
   public ModelAndView homepage() {
 
-    return new ModelAndView("CreateAccount");
+    return new ModelAndView("Society");
   }
 
 

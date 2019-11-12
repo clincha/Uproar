@@ -60,7 +60,7 @@
             </div>
         </div>
         <div class="foot">
-            <a href="/home"> <h1 >UpRoar</h1></a>
+            <a href="/"> <h1 >UpRoar</h1></a>
     </div>
     </div>
 </div>
