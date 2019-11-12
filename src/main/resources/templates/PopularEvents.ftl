@@ -7,7 +7,7 @@
 
 
 
-<link rel="stylesheet" href="../static/css/login.css">
+<link rel="stylesheet" href="../static/css/events.css">
 
 <body>
 <div class="p1">
