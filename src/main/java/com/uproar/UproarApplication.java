@@ -8,4 +8,5 @@ public class UproarApplication {
   public static void main(String[] args) {
     SpringApplication.run(UproarApplication.class, args);
   }
+
 }
