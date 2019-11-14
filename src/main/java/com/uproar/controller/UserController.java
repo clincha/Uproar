@@ -28,6 +28,4 @@ public class UserController {
   public ModelAndView settings() {
     return null;
   }
-
-
 }

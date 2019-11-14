@@ -1,15 +1,11 @@
-
 <html>
 <title>Create An Account</title>
 <head>
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-
 </head>
-
 <body>
 <div class="mainbody">
     <div class="loginBox">
@@ -23,36 +19,31 @@
                                 <div class="col-md-9 col-lg-8 mx-auto">
                                     <h3 class="login-heading mb-4">Enter your new Password.</h3>
                                     <form>
-
                                         <div class="form-label-group">
-                                            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                                            <input type="password" id="inputPassword" class="form-control"
+                                                   placeholder="Password" required>
                                             <label for="inputPassword">Password</label>
                                         </div>
                                         <div class="form-label-group">
-                                            <input type="password" id="inputPasswordAgain" class="form-control" placeholder="Confirm Password" required>
+                                            <input type="password" id="inputPasswordAgain" class="form-control"
+                                                   placeholder="Confirm Password" required>
                                             <label for="inputPasswordAgain">Confirm Password</label>
                                         </div>
-                                        <button class="btn btn-lg btn-info btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Reset Password</button>
-
-
-
+                                        <button class="btn btn-lg btn-info btn-block btn-login text-uppercase font-weight-bold mb-2"
+                                                type="submit">Reset Password
+                                        </button>
                                     </form>
-
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-        </div><div class="foot">
-            <a href="/"> <h1 >UpRoar</h1></a>
+        </div>
+        <div class="foot">
+            <a href="/"><h1>UpRoar</h1></a>
         </div>
     </div>
 </div>
-
 </body>
-
-
-
 </html>

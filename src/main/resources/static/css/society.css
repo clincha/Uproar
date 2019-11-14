@@ -1,20 +1,21 @@
-.mainblock{
+.mainblock {
     background-color: #f9fdfb;
     border-radius: 10%;
     width: 80%;
     position: center;
     height: auto;
-   margin-left: 10%;
-    margin-top: -10%;}
+    margin-left: 10%;
+    margin-top: -10%;
+}
 
-.avt{
-  border-radius: 50%;
+.avt {
+    border-radius: 50%;
     width: 18vmax;
     height: 18vmax;
     border: 3vm grey;
-  }
+}
 
-.avatar{
+.avatar {
     text-align: center;
     margin-top: -32%;
 }
@@ -24,30 +25,21 @@
 }
 
 
-h2{
+h2 {
     margin-left: 5%;
     width: 90%;
 }
 
 
-
-
-
-
-
-
-
 @media (max-width: 1000px) {
-.mainblock{
-    background-color: #DEF3FD;
-    width: 80%;
-    position: center;
-    height: 200%;
-    margin-left: 10%;
-    margin-top: -20%;
-}
-
-
+    .mainblock {
+        background-color: #DEF3FD;
+        width: 80%;
+        position: center;
+        height: 200%;
+        margin-left: 10%;
+        margin-top: -20%;
+    }
 
 
 }

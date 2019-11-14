@@ -4,22 +4,22 @@
 }
 
 .social-basic a:hover {
-    opacity:1;
+    opacity: 1;
 }
 
 .social-basic .social > a {
-    font-size:50px;
-    line-height:50px;
+    font-size: 50px;
+    line-height: 50px;
     margin-top: 20px;
     margin-bottom: 20px;
     margin-right: 20px;
     margin-left: 20px;
 
-    color:inherit;
-    opacity:0.75;
+    color: inherit;
+    opacity: 0.75;
 }
 
 .social-basic .social > a:hover {
-    opacity:0.9;
+    opacity: 0.9;
 }
 

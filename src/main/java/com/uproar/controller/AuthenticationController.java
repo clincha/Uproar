@@ -11,6 +11,4 @@ public class AuthenticationController {
   public ModelAndView logout() {
     return null;
   }
-
-
 }
