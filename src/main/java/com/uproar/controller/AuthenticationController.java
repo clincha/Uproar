@@ -11,7 +11,6 @@ public class AuthenticationController {
 
   @GetMapping("/login")
   public ModelAndView login(HttpServletRequest request) {
-    System.out.println(request.getQueryString());
     if ("error".equals(request.getQueryString())) {
       return new ModelAndView("authentication/loginError");
     } else if ("logout".equals(request.getQueryString())) {
