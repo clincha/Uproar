@@ -6,8 +6,6 @@
         <div class="logo">
             UpRoar
         </div>
-        <#nested>
-
         <div class="menu">
             <ul>
                 <li><a href="/user/tickets">My Tickets</a></li>
@@ -17,6 +15,5 @@
                <#-- <li><a href="/${login.inout}">Log ${login.inout}</a></li> but for now--> <li><a href="/login">Log In</a></li>
             </ul>
         </div>
-
     </nav>
 </#macro>
