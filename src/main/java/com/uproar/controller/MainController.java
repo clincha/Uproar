@@ -10,7 +10,7 @@ public class MainController {
   @GetMapping("/")
   public ModelAndView homepage() {
 
-    return new ModelAndView("exampleTemplate");
+    return new ModelAndView("popularEvents");
   }
 
 
