@@ -1,4 +1,4 @@
-<#macro layout title="Uproar">
+<#macro standardPage title="Uproar">
     <!doctype html>
     <html lang="en">
     <head>
