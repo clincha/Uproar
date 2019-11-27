@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata:700');
 
-html, body {
+body {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -26,7 +26,7 @@ header {
 
 }
 
-.headtext {
+.header-text {
     padding-top: 10%;
     color: white;
     text-shadow: 1px 0 0 grey, 0 -1px 0 grey, 0 1px 0 grey, -1px 0 0 grey;
@@ -54,6 +54,7 @@ header {
 
 nav {
     position: fixed;
+    top: 0;
     width: 100%;
     line-height: 60px;
 }
