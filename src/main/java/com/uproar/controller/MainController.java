@@ -9,7 +9,7 @@ public class MainController {
 
   @GetMapping("/")
   public ModelAndView homepage() {
-    return new ModelAndView("passwordResetPost");
+    return new ModelAndView("passwordResetPre");
   }
 
 
