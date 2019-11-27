@@ -312,3 +312,7 @@ nav ul li a {
         display: block;
     }
 }
+
+.search-border {
+    enable-background: new 0 0 671 111;
+}
