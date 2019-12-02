@@ -9,11 +9,8 @@ public class MainController {
 
   @GetMapping("/")
   public ModelAndView homepage() {
-
-    return new ModelAndView("Society");
+    return new ModelAndView("popularEvents");
   }
-
-
 
 
 }
