@@ -1,5 +1,3 @@
-This is the event page, it should show off the event. It needs a "buy ticket button"
-
 <#import "../layout.ftl" as layout>
 
 <@layout.standardPage; section>
@@ -10,6 +8,7 @@ This is the event page, it should show off the event. It needs a "buy ticket but
     <#-- Import your stylesheets here -->
     </#if>
     <#if section="content">
-        Event ${event.getId()}
+        <h1>${event.getTitle()}</h1>
+        <p>${event.getSociety()} - ${event.getDescription()}</p>
     </#if>
 </@layout.standardPage>

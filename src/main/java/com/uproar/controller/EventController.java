@@ -1,9 +1,11 @@
 package com.uproar.controller;
 
+import com.uproar.entity.Event;
 import com.uproar.service.EventService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -17,7 +19,18 @@ public class EventController {
     this.eventService = eventService;
   }
 
-  @GetMapping("{id}")
+  @GetMapping("/create")
+  public ModelAndView createEventPage() {
+    return new ModelAndView("events/create event");
+  }
+
+  @PostMapping("/create")
+  public ModelAndView createEvent(Event event) {
+    event = eventService.createEvent(event);
+    return getEvent(event.getId());
+  }
+
+  @GetMapping("/{id}")
   public ModelAndView getEvent(@PathVariable("id") long id) {
     return new ModelAndView("events/event")
       .addObject("event", eventService.getEvent(id));
