@@ -1,5 +1,5 @@
 <#macro create events>
-    <#import "navbar.ftl" as navbar>
+    <#import "../navbar.ftl" as navbar>
 
     <head>
         <link rel="stylesheet" href="./style.css">
