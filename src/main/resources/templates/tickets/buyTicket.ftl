@@ -8,10 +8,6 @@
     <#-- Import your stylesheets here -->
     </#if>
     <#if section="content">
-        <h1>${event.getTitle()}</h1>
-        <p>${event.getSociety()} - ${event.getDescription()}</p>
-        <form action="/ticket/buy/${event.getId()}">
-            <input type="submit">
-        </form>
+        buy ticket page ${event.getId()}
     </#if>
 </@layout.standardPage>
