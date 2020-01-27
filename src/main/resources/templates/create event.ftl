@@ -1,3 +1,4 @@
+<#macro create events>
     <#import "navbar.ftl" as navbar>
 
     <head>
@@ -58,3 +59,4 @@
     </div>
 
     </body>
+</#macro>
