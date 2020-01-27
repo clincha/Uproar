@@ -8,9 +8,9 @@
     <#-- Import your stylesheets here -->
     </#if>
     <#if section="content">
-        <h1>${event.getTitle()}</h1>
-        <p>${event.getSociety()} - ${event.getDescription()}</p>
-        <a href="/">Home page</a><br>
-        <a href="/ticket/buy/${event.getId()}">Buy ticket</a>
+        You have paid for ${ticket.getEvent().getTitle()}
+        <form action="/" method="get">
+            <button type="submit">Home page</button>
+        </form>
     </#if>
 </@layout.standardPage>

@@ -18,8 +18,10 @@ public class EventService {
   }
 
   public Event createEvent(Event event) {
-    System.out.println(event);
-    event = eventRepository.save(event);
-    return event;
+    return eventRepository.save(event);
+  }
+
+  public Iterable<Event> getAllEvents() {
+    return eventRepository.findAll();
   }
 }

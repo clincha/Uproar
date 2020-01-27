@@ -36,4 +36,16 @@ public class EventController {
       .addObject("event", eventService.getEvent(id));
   }
 
+  @GetMapping("myEvents")
+  public ModelAndView myEvents() {
+    return new ModelAndView("events/myEvents")
+      .addObject("events", eventService.getAllEvents());
+  }
+
+  @GetMapping("all")
+  public ModelAndView allEvents() {
+    return new ModelAndView("events/all")
+      .addObject("events", eventService.getAllEvents());
+  }
+
 }

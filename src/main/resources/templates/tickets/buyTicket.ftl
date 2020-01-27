@@ -8,6 +8,9 @@
     <#-- Import your stylesheets here -->
     </#if>
     <#if section="content">
-        buy ticket page ${event.getId()}
+        You are buying a ticket for ${event.getTitle()}
+        <form action="/ticket/buy/${event.getId()}" method="post">
+            <button type="submit">Purchase</button>
+        </form>
     </#if>
 </@layout.standardPage>
