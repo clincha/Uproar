@@ -10,10 +10,13 @@
     <#if section="content">
         <h1>My Tickets</h1>
         <#list tickets>
-            <#items as ticket>
-                Event: ${ticket.getEvent().getTitle()}
-                Ticket Number: ${ticket.getId()}
-            </#items>
+            <ul>
+                <#items as ticket>
+                    <li>
+                        Event: ${ticket.getEvent().getTitle()} [${ticket.getId()}]
+                    </li>
+                </#items>
+            </ul>
         <#else>
             You have no tickets! <br>
             <a href="/event/all">All events</a><br>
