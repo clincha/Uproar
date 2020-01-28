@@ -1,11 +1,11 @@
-<#import "layout.ftl" as layout>
+<#import "../layout.ftl" as layout>
 
 <@layout.standardPage title="Create Account"; section>
     <#if section = "scripts">
     <#-- javascript tags go in here -->
     </#if>
     <#if section = "styles">
-        <link rel="stylesheet" href="css/login.css">
+        <link rel="stylesheet" href="../../static/css/login.css">
     </#if>
     <#if section="content">
         <body>

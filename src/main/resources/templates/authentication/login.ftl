@@ -2,7 +2,7 @@
 <html>
 <title>Login</title>
 <head>
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="../../static/css/login.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.js"></script>
