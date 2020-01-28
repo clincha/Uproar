@@ -20,12 +20,12 @@ public class EventController {
   }
 
   @GetMapping("/create")
-  public ModelAndView createEventPage() {
+  public ModelAndView createEvent() {
     return new ModelAndView("events/create event");
   }
 
   @PostMapping("/create")
-  public ModelAndView createEvent(Event event) {
+  public ModelAndView createEventPost(Event event) {
     event = eventService.createEvent(event);
     return getEvent(event.getId());
   }
@@ -37,13 +37,13 @@ public class EventController {
   }
 
   @GetMapping("myEvents")
-  public ModelAndView myEvents() {
+  public ModelAndView getMyEvents() {
     return new ModelAndView("events/myEvents")
       .addObject("events", eventService.getAllEvents());
   }
 
   @GetMapping("all")
-  public ModelAndView allEvents() {
+  public ModelAndView getAllEvents() {
     return new ModelAndView("events/all")
       .addObject("events", eventService.getAllEvents());
   }

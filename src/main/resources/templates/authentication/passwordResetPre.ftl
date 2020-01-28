@@ -1,7 +1,7 @@
-<#import "layout.ftl" as layout>
+<#import "../layout.ftl" as layout>
 <@layout.standardPage title="Create an account"; section>
     <#if section = "styles">
-        <link rel="stylesheet" href="css/login.css">
+        <link rel="stylesheet" href="../../static/css/login.css">
     </#if>
     <#if section="content">
         <div class="mainbody">

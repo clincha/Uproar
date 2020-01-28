@@ -22,13 +22,13 @@ public class TicketController {
   }
 
   @GetMapping("/buy/{eventId}")
-  public ModelAndView buyTicket(@PathVariable Long eventId) {
+  public ModelAndView buyTicketGet(@PathVariable Long eventId) {
     return new ModelAndView("/tickets/buyTicket")
       .addObject("event", eventService.getEvent(eventId));
   }
 
   @PostMapping("/buy/{eventId}")
-  public ModelAndView makePayment(@PathVariable Long eventId) {
+  public ModelAndView buyTicketPost(@PathVariable Long eventId) {
     return new ModelAndView("/tickets/makePayment")
       .addObject("ticket", ticketService.buyTicket(eventId));
   }
