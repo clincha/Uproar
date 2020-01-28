@@ -1,6 +1,6 @@
-<#import "navbar.ftl" as navbar>
+<#import "../navbar.ftl" as navbar>
 <#macro events>
-    <#import "navbar.ftl" as navbar>
+    <#import "../navbar.ftl" as navbar>
 
 
     <head>
@@ -63,7 +63,7 @@
                 </div>
             </aside>
     </section>
-    <script src="js/script.js"></script>
+    <script src="../../static/js/script.js"></script>
     </body>
     </html>
 </#macro>

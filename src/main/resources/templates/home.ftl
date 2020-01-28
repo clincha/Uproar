@@ -20,7 +20,7 @@
         <br>
         <div class="wrapper">
             <div class="card1">
-                <div class="card" style="width: 25rem;"><a href="Placeholder">
+                <div class="card" style="width: 25rem;"><a href="/event/1">
                         <img src="../image/Placeholder.jpg" class="card-img-top" alt="..."> </a>
                     <div class="card-body">
                         <h5 class="card-title">Event Example</h5>
