@@ -18,7 +18,7 @@ public class securityConfig extends WebSecurityConfigurerAdapter {
     auth.inMemoryAuthentication()
       .withUser("user1").password(passwordEncoder().encode("password")).roles("USER").and()
       .withUser("user2").password(passwordEncoder().encode("password")).roles("USER").and()
-      .withUser("admin").password(passwordEncoder().encode("password")).roles("ADMIN");
+      .withUser("admin@uproar.com").password(passwordEncoder().encode("password")).roles("ADMIN");
   }
 
   @Override
@@ -26,22 +26,15 @@ public class securityConfig extends WebSecurityConfigurerAdapter {
     http
       .csrf().disable()
       .authorizeRequests()
-      .antMatchers("/**").hasRole("ADMIN")
       .antMatchers("/ticket/**").hasRole("USER")
-      .antMatchers("/event/**").hasRole("USER")
-      .antMatchers("/").permitAll()
-      .antMatchers("/login").permitAll()
+      .antMatchers("/**").permitAll()
       .anyRequest().authenticated()
       .and()
       .formLogin()
       .loginPage("/login")
-      .loginProcessingUrl("/performLogin")
-      .defaultSuccessUrl("/", true)
-      .failureUrl("/login?error=true")
       .and()
       .logout()
-      .logoutUrl("/logout")
-      .deleteCookies("JSESSIONID");
+      .logoutUrl("/logout");
   }
 
   @Bean
