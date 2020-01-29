@@ -16,6 +16,12 @@ public class AuthenticationController {
     return new ModelAndView("authentication/login");
   }
 
+  @GetMapping("/loginError")
+  public ModelAndView loginError() {
+    return new ModelAndView("authentication/login")
+      .addObject("error", true);
+  }
+
   @GetMapping("/register")
   public ModelAndView register(Model model) {
     UserDTO userDTO = new UserDTO();

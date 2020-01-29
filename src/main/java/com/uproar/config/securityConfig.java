@@ -16,8 +16,8 @@ public class securityConfig extends WebSecurityConfigurerAdapter {
   @Override
   protected void configure(AuthenticationManagerBuilder auth) throws Exception {
     auth.inMemoryAuthentication()
-      .withUser("user1").password(passwordEncoder().encode("password")).roles("USER").and()
-      .withUser("user2").password(passwordEncoder().encode("password")).roles("USER").and()
+      .withUser("user1@uproar.com").password(passwordEncoder().encode("password")).roles("USER").and()
+      .withUser("user2@uproar.com").password(passwordEncoder().encode("password")).roles("USER").and()
       .withUser("admin@uproar.com").password(passwordEncoder().encode("password")).roles("ADMIN");
   }
 
@@ -32,6 +32,7 @@ public class securityConfig extends WebSecurityConfigurerAdapter {
       .and()
       .formLogin()
       .loginPage("/login")
+      .failureUrl("/loginError")
       .and()
       .logout()
       .logoutUrl("/logout");

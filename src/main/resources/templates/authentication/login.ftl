@@ -21,24 +21,29 @@
                             <div class="row">
                                 <div class="col-md-9 col-lg-8 mx-auto">
                                     <h3 class="login-heading mb-4">Sign-In!</h3>
+                                    <#if error??>
+                                        <div class="alert alert-danger" role="alert">
+                                            There was an error
+                                        </div>
+                                    </#if>
                                     <form action="/login" method="post">
                                         <div class="form-label-group">
                                             <input type="email" id="inputEmail" class="form-control"
-                                                   placeholder="Email address" required autofocus>
+                                                   placeholder="Email address" name="username" required autofocus>
                                             <label for="inputEmail">Email address</label>
                                         </div>
                                         <div class="form-label-group">
                                             <input type="password" id="inputPassword" class="form-control"
-                                                   placeholder="Password" required>
+                                                   placeholder="Password" name="password" required>
                                             <label for="inputPassword">Password</label>
                                         </div>
                                         <button class="btn btn-lg btn-info btn-block btn-login text-uppercase font-weight-bold mb-2"
                                                 type="submit">Sign in
                                         </button>
-                                        <div class="text-center">
-                                            <a class="small" href="/register">Don't have an account? Create one now!</a>
-                                        </div>
                                     </form>
+                                    <div class="text-center">
+                                        <a class="small" href="/register">Don't have an account? Create one now!</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
