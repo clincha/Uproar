@@ -31,6 +31,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
   @Override
   protected void configure(final HttpSecurity http) throws Exception {
     http
+//      .addFilterBefore(metadataGeneratorFilter(), ChannelProcessingFilter.class)
       .authorizeRequests()
       .antMatchers("/saml*").permitAll()
       .anyRequest().authenticated()
@@ -50,4 +51,18 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
       .identityProvider()
       .metadataFilePath(this.metadataUrl);
   }
+
+//  @Bean
+//  public MetadataGeneratorFilter metadataGeneratorFilter() {
+//    return new MetadataGeneratorFilter(metadataGenerator());
+//  }
+//
+//  @Bean
+//  public MetadataGenerator metadataGenerator() {
+//    MetadataGenerator metadataGenerator = new MetadataGenerator();
+//    metadataGenerator.setEntityId("123WDN");
+//    metadataGenerator.setEntityBaseURL("https://localhost:8443");
+//    metadataGenerator.setKeyManager();
+//    return metadataGenerator;
+//  }
 }
