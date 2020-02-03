@@ -8,7 +8,7 @@
     <#-- Import your stylesheets here -->
     </#if>
     <#if section="content">
-        This hjas enlsnflskdfn
+        <h1>My events</h1>
         <ul>
             <#list events as event>
                 <li><a href="/event/${event.getId()}">${event.getTitle()}</a></li>

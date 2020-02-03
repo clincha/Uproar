@@ -32,8 +32,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
   protected void configure(final HttpSecurity http) throws Exception {
     http
       .authorizeRequests()
-      .antMatchers("/saml*").permitAll()
-      .anyRequest().authenticated()
+      .antMatchers("/").permitAll()
+      .antMatchers("/saml/**").permitAll()
+      .antMatchers("/image/**").permitAll()
+      .antMatchers("/css/**").permitAll()
+      .antMatchers("/js/**").permitAll()
+      .anyRequest().permitAll()
       .and()
       .apply(saml())
       .serviceProvider()
