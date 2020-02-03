@@ -8,8 +8,8 @@
         </div>
         <div class="menu">
             <ul>
-                <li><a href="/user/tickets">My Tickets</a></li>
-                <li><a href="/user/events">My Events</a></li>
+                <li><a href="/ticket/myTickets">My Tickets</a></li>
+                <li><a href="/event/myEvents">My Events</a></li>
                 <li><a href="/user/societies">My Societies</a></li>
                 <li><a href="/user/settings">Settings</a></li>
                 <#-- <li><a href="/${login.inout}">Log ${login.inout}</a></li> but for now-->
