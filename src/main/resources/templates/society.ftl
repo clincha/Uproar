@@ -24,7 +24,8 @@
             <h1 class="inblock">
                 Society Name
             </h1>
-            <@social.social fbLink=SocialLinks.fbLink snapLink=SocialLinks.snaplink instaLink=SocialLinks.instaLink twitterLink=SocialLinks.twitterLink></@social.social>
+           <#--  <@social.social fbLink=SocialLinks.fbLink snapLink=SocialLinks.snaplink instaLink=SocialLinks.instaLink twitterLink=SocialLinks.twitterLink></@social.social>
+            -->
             <h2>This is the bio about the society that they can then fill in themselves, we can give them several lines
                 to do this so ... </h2>
             <br>
