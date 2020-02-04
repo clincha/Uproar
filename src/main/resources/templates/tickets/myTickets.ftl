@@ -1,26 +1,58 @@
 <#import "../layout.ftl" as layout>
-
+<div class="page>"
 <@layout.standardPage; section>
     <#if section = "scripts">
     <#-- javascript tags go in here -->
-    </#if>
+        <script src="https://cdn.jsdelivr.net/jsbarcode/3.6.0/JsBarcode.all.min.js"></script>
+        <script>
+            JsBarcode(".barcode").init();
+        </script>
+
+</#if>
     <#if section = "styles">
-    <#-- Import your stylesheets here -->
+
+        <link rel="stylesheet" href="/css/MyTicket.css">
     </#if>
     <#if section="content">
         <h1>My Tickets</h1>
+        <hr>
         <#list tickets>
             <ul>
                 <#items as ticket>
                     <li>
+
+                        <div class="card">
+                            <img src="../image/BGblue.png" alt="eventphoto" style="width:100%">
+                            <h1> <#-- ${ticket.getEvent().getTitle()}--> test </h1>
+                            <p class="title">test <#-- ${ticket.getEvent().getTitle()}--> </p>
+                            <p> <svg class="barcode"
+                                     jsbarcode-format="upc"
+                                     jsbarcode-value="123456789012" <#-- this is where the barcode for ticket goes is ID? [${ticket.getId()}] -->
+                                     jsbarcode-textmargin="0"
+                                     jsbarcode-fontoptions="bold">
+                                </svg>
+                            </p>
+                            <p><button href="#">More Info</button></p>
+                        </div>
                         Event: ${ticket.getEvent().getTitle()} [${ticket.getId()}]
                     </li>
                 </#items>
             </ul>
         <#else>
-            You have no tickets! <br>
-            <a href="/event/all">All events</a><br>
+
+            <br>
+           <h2> You have no tickets! Take a look at the <a href="/event/all"> <i>events available near you. </i></a><br>
+               <img class ='whoops' src="../image/BG.jpg" alt="BG">
+               </h2>
+
+
+
+
+        <div class="image"></div>
         </#list>
-        <a href="/">Home page</a>
+        <footer>
+        <a href="/">Uproar</a>
+        </footer>
     </#if>
+    </div>
 </@layout.standardPage>
