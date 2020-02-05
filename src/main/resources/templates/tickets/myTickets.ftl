@@ -21,6 +21,7 @@
             You have no tickets! <br>
             <a href="/event/all">All events</a><br>
         </#list>
+<#--        ${user.getEmail()}-->
         <a href="/">Home page</a>
     </#if>
 </@layout.standardPage>

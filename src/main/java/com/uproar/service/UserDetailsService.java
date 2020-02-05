@@ -28,6 +28,12 @@ public class UserDetailsService implements org.springframework.security.core.use
 
   @Override
   public Object loadUserBySAML(SAMLCredential credential) throws UsernameNotFoundException {
-    return loadUserByUsername(credential.getAttributeAsString("email"));
+    String username = credential.getNameID().getValue();
+    User user = userRepository.findByEmail(username);
+    if (user == null) {
+      user = new User(username, username, username, "password", "ADMIN", true);
+      userRepository.save(user);
+    }
+    return user;
   }
 }

@@ -8,6 +8,7 @@
     <#-- Import your stylesheets here -->
     </#if>
     <#if section="content">
+        <h1>Make payment</h1>
         You have paid for ${ticket.getEvent().getTitle()}
         <form action="/" method="get">
             <button type="submit">Home page</button>

@@ -8,7 +8,10 @@
     <#-- Import your stylesheets here -->
     </#if>
     <#if section="content">
-        You are buying a ticket for ${event.getTitle()}
+        <h1>Buy ticket</h1>
+        You are buying a ticket for the event: ${event.getTitle()}
+
+        Your email is ${user.getEmail()}
         <form action="/ticket/buy/${event.getId()}" method="post">
             <button type="submit">Purchase</button>
         </form>

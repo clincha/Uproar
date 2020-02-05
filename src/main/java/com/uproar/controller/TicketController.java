@@ -2,6 +2,7 @@ package com.uproar.controller;
 
 import com.uproar.service.EventService;
 import com.uproar.service.TicketService;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,7 +25,8 @@ public class TicketController {
   @GetMapping("/buy/{eventId}")
   public ModelAndView buyTicketGet(@PathVariable Long eventId) {
     return new ModelAndView("/tickets/buyTicket")
-      .addObject("event", eventService.getEvent(eventId));
+      .addObject("event", eventService.getEvent(eventId))
+      .addObject("user", SecurityContextHolder.getContext().getAuthentication().getPrincipal());
   }
 
   @PostMapping("/buy/{eventId}")
