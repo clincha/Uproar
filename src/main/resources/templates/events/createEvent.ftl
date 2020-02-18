@@ -13,6 +13,7 @@
             <div class="py-5 text-center">
                 <h1>Create Event</h1>
             </div>
+            //
             <form>
                 <div class="form-group row">
                     <label for="" class="col-sm-2 col-form-label">Event Name</label>
