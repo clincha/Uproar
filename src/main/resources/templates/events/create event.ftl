@@ -13,7 +13,7 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="eventTitle">Event Title</label>
-                        <input id="eventTitle" name="title" type="text" class="form-control" placeholder="Event Title">
+                        <input id="eventTitle" name="name" type="text" class="form-control" placeholder="Event Title">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="eventSociety">Society</label>

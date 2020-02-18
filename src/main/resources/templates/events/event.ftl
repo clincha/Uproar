@@ -8,8 +8,8 @@
     <#-- Import your stylesheets here -->
     </#if>
     <#if section="content">
-        <h1>${event.getTitle()}</h1>
-        <p>${event.getSociety()} - ${event.getDescription()}</p>
+        <h1>${event.getName()}</h1>
+        <p>${event.getLocation()}</p>
         <a href="/">Home page</a><br>
         <a href="/ticket/buy/${event.getId()}">Buy ticket</a>
     </#if>

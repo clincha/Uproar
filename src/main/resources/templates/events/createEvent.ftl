@@ -14,17 +14,17 @@
                 <h1>Create Event</h1>
             </div>
             //
-            <form>
+            <form action="/create" method="post">
                 <div class="form-group row">
                     <label for="" class="col-sm-2 col-form-label">Event Name</label>
                     <div class="col-4">
-                        <input id="" name="" type="text" class="form-control">
+                        <input id="" name="name" type="text" class="form-control">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="" class="col-sm-2 col-form-label">Event Location</label>
                     <div class="col-4">
-                        <input id="" name="" type="text" class="form-control">
+                        <input id="" name="location" type="text" class="form-control">
                     </div>
                 </div>
                 <div class="form-group row">
@@ -71,7 +71,7 @@
 
                 <div class="form-group row">
                     <div class="offset-4 col-4">
-                        <button name="submit" type="submit" class="btn btn-primary">Create Event </button>
+                        <button name="submit" type="submit" class="btn btn-primary">Create Event</button>
                     </div>
                 </div>
 
