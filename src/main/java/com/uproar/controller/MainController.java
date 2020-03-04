@@ -9,7 +9,7 @@ public class MainController {
 
   @GetMapping("/")
   public ModelAndView homepage() {
-    return new ModelAndView("tickets/doPayment");
+    return new ModelAndView("home");
   }
 
 
