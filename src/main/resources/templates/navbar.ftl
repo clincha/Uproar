@@ -1,4 +1,4 @@
-<#macro navbar>
+<#macro s   navbar>
     <nav>
         <div class="menu-icon">
             <i class="fa fa-bars fa-5x"></i>
