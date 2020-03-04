@@ -98,14 +98,6 @@ nav ul li a {
     display: none;
 }
 
-.container {
-    position: relative;
-    margin: calc(5px + 2vh + 2vw) auto 0 auto;
-    padding: 0;
-    width: 100%;
-    max-width: 840px;
-}
-
 .search-box {
     position: relative;
     width: 100%;
