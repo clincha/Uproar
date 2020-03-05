@@ -24,4 +24,8 @@ public class EventService {
   public Iterable<Event> getAllEvents() {
     return eventRepository.findAll();
   }
+
+  public Iterable<Event> getPopularEvents() {
+    return eventRepository.findAll();
+  }
 }

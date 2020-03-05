@@ -24,102 +24,19 @@
             </div>
 
             <div class="card-columns">
-                <div class="card">
-                    <a href="events">
-                        <img src="image/Placeholder.jpg" class="card-img-top" alt="placeholder">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">Event Example</h5>
-                        <p class="card-text">Here we will need the bio of the event, can just have event name, time
-                            place
-                            society etc</p>
+                <#list events as event>
+                    <div id="${event.id}" class="card">
+                        <a href="events">
+                            <img src="image/Placeholder.jpg" class="card-img-top" alt="Event image">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">${event.title}</h5>
+                            <p class="card-text">${event.description}</p>
+                        </div>
                     </div>
-                </div>
-
-                <div class="card">
-                    <a href="events">
-                        <img src="image/Placeholder.jpg" class="card-img-top" alt="placeholder">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">Event Example</h5>
-                        <p class="card-text">Here we will need the bio of the event, can just have event name, time
-                            place
-                            society etc</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <a href="events">
-                        <img src="image/Placeholder.jpg" class="card-img-top" alt="placeholder">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">Event Example</h5>
-                        <p class="card-text">Here we will need the bio of the event, can just have event name, time
-                            place
-                            society etc</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <a href="events">
-                        <img src="image/Placeholder.jpg" class="card-img-top" alt="placeholder">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">Event Example</h5>
-                        <p class="card-text">Here we will need the bio of the event, can just have event name, time
-                            place
-                            society etc</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <a href="events">
-                        <img src="image/Placeholder.jpg" class="card-img-top" alt="placeholder">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">Event Example</h5>
-                        <p class="card-text">Here we will need the bio of the event, can just have event name, time
-                            place
-                            society etc</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <a href="events">
-                        <img src="image/Placeholder.jpg" class="card-img-top" alt="placeholder">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">Event Example</h5>
-                        <p class="card-text">Here we will need the bio of the event, can just have event name, time
-                            place
-                            society etc</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <a href="events">
-                        <img src="image/Placeholder.jpg" class="card-img-top" alt="placeholder">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">Event Example</h5>
-                        <p class="card-text">Here we will need the bio of the event, can just have event name, time
-                            place
-                            society etc</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <a href="events">
-                        <img src="image/Placeholder.jpg" class="card-img-top" alt="placeholder">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">Event Example</h5>
-                        <p class="card-text">Here we will need the bio of the event, can just have event name, time
-                            place
-                            society etc</p>
-                    </div>
-                </div>
+                </#list>
             </div>
+
             <div class="row">
                 <div class="col">
                     <a href="events">
@@ -128,6 +45,7 @@
                 </div>
             </div>
         </div>
+
         <footer>
             <div class="socialposition">
                 <br>
