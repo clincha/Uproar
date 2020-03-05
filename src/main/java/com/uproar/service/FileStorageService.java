@@ -21,7 +21,10 @@ public class FileStorageService {
 
   public FileEntity storeFile(MultipartFile multipartFile) throws IOException {
     FileEntity file = new FileEntity(multipartFile.getOriginalFilename(), multipartFile.getContentType(), multipartFile.getBytes());
-    return fileRepository.save(file);
+    System.out.println(file);
+    file = fileRepository.save(file);
+    System.out.println(file);
+    return file;
   }
 
   public FileEntity getFile(Long fileId) throws FileNotFoundException {

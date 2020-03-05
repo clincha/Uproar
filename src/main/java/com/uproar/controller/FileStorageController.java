@@ -44,7 +44,7 @@ public class FileStorageController {
     FileEntity fileEntity = fileStorageService.getFile(fileId);
 
     return ResponseEntity.ok()
-      .contentType(MediaType.parseMediaType(fileEntity.getFiletype()))
+      .contentType(MediaType.parseMediaType(fileEntity.getContentType()))
       .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename =\"" + fileEntity.getFilename() + "\"")
       .body(new ByteArrayResource(fileEntity.getData()));
   }

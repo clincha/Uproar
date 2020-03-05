@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
+import java.util.Arrays;
 
 @Entity
 public class FileEntity {
@@ -15,7 +16,7 @@ public class FileEntity {
 
   private String filename;
 
-  private String filetype;
+  private String contentType;
 
   @Lob
   private byte[] data;
@@ -23,10 +24,20 @@ public class FileEntity {
   public FileEntity() {
   }
 
-  public FileEntity(String filename, String contentType, byte[] bytes) {
+  public FileEntity(String filename, String contentType, byte[] data) {
     this.filename = filename;
-    this.filename = contentType;
-    this.data = bytes;
+    this.contentType = contentType;
+    this.data = data;
+  }
+
+  @Override
+  public String toString() {
+    return "FileEntity{" +
+      "id=" + id +
+      ", filename='" + filename + '\'' +
+      ", contentType='" + contentType + '\'' +
+      ", data=" + Arrays.toString(data) +
+      '}';
   }
 
   public Long getId() {
@@ -45,12 +56,12 @@ public class FileEntity {
     this.filename = filename;
   }
 
-  public String getFiletype() {
-    return filetype;
+  public String getContentType() {
+    return contentType;
   }
 
-  public void setFiletype(String filetype) {
-    this.filetype = filetype;
+  public void setContentType(String filetype) {
+    this.contentType = filetype;
   }
 
   public byte[] getData() {
