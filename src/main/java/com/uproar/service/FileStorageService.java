@@ -26,9 +26,7 @@ public class FileStorageService {
 
   public File storeFile(MultipartFile multipartFile) throws IOException {
     File file = new File(multipartFile.getOriginalFilename(), multipartFile.getContentType(), multipartFile.getBytes());
-    System.out.println(file);
     file = fileRepository.save(file);
-    System.out.println(file);
     return file;
   }
 
