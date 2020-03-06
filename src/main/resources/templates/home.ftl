@@ -1,11 +1,11 @@
 <#--This is the View that will contain the cards for the popular now -->
 <#import "header.ftl" as header>
-<#import "social.ftl" as social>
+<#import "societies/social.ftl" as social>
 <#import "layout.ftl" as layout>
 
 <@layout.standardPage; section>
     <#if section = "scripts">
-        <script src="js/script.js"></script>
+        <!-- Scripts go here -->
     </#if>
     <#if section = "styles">
         <link rel="stylesheet" href="css/header.css">
@@ -13,7 +13,9 @@
         <link rel="stylesheet" href="css/events.css">
     </#if>
     <#if section = "content">
+
         <@header.header></@header.header>
+
         <div class="container-fluid">
             <div class="row">
                 <div class="col">
@@ -25,8 +27,8 @@
 
             <div class="card-columns">
                 <#list events as event>
-                    <div id="${event.id}" class="card">
-                        <a href="events">
+                    <div id="event-${event.id}" class="card">
+                        <a href="/event/${event.id}">
                             <img src="image/Placeholder.jpg" class="card-img-top" alt="Event image">
                         </a>
                         <div class="card-body">
@@ -37,12 +39,8 @@
                 </#list>
             </div>
 
-            <div class="row">
-                <div class="col">
-                    <a href="events">
-                        <div class="exploreMore"><i>Explore more...</i></div>
-                    </a>
-                </div>
+            <div class="float-right">
+                <a href="/event/all">Explore more...</a>
             </div>
         </div>
 

@@ -1,7 +1,12 @@
 package com.uproar.service;
 
-import com.uproar.entity.FileEntity;
+import com.uproar.entity.File;
 import com.uproar.repositry.FileRepository;
+import org.springframework.core.io.ByteArrayResource;
+import org.springframework.core.io.Resource;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -19,23 +24,23 @@ public class FileStorageService {
     this.fileRepository = fileRepository;
   }
 
-  public FileEntity storeFile(MultipartFile multipartFile) throws IOException {
-    FileEntity file = new FileEntity(multipartFile.getOriginalFilename(), multipartFile.getContentType(), multipartFile.getBytes());
+  public File storeFile(MultipartFile multipartFile) throws IOException {
+    File file = new File(multipartFile.getOriginalFilename(), multipartFile.getContentType(), multipartFile.getBytes());
     System.out.println(file);
     file = fileRepository.save(file);
     System.out.println(file);
     return file;
   }
 
-  public FileEntity getFile(Long fileId) throws FileNotFoundException {
+  public File getFile(Long fileId) throws FileNotFoundException {
     return fileRepository.findById(fileId)
       .orElseThrow(() -> new FileNotFoundException("File not found with id " + fileId));
   }
 
-  public List<FileEntity> storeFiles(MultipartFile[] files) {
-    List<FileEntity> list = new ArrayList<>();
+  public List<File> storeFiles(MultipartFile[] files) {
+    List<File> list = new ArrayList<>();
     for (MultipartFile file : files) {
-      FileEntity fileEntity = null;
+      File fileEntity = null;
       try {
         fileEntity = storeFile(file);
       } catch (IOException e) {
@@ -45,5 +50,13 @@ public class FileStorageService {
       list.add(fileEntity);
     }
     return list;
+  }
+
+  public ResponseEntity<Resource> downloadFile(Long fileId) throws FileNotFoundException {
+    File file = fileRepository.findById(fileId).orElseThrow(FileNotFoundException::new);
+    return ResponseEntity.ok()
+      .contentType(MediaType.parseMediaType(file.getContentType()))
+      .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename =\"" + file.getFilename() + "\"")
+      .body(new ByteArrayResource(file.getData()));
   }
 }

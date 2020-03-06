@@ -10,7 +10,7 @@
     <#if section="content">
         <h1>${event.getTitle()}</h1>
         <p>${event.getSociety()} - ${event.getDescription()}</p>
-        <a href="/">Home page</a><br>
-        <a href="/ticket/buy/${event.getId()}">Buy ticket</a>
+        <a href="/">Home page</a> | <a href="/ticket/buy/${event.getId()}">Buy ticket</a>
+        <img src="/file/${event.getImageId()}" alt="Society photo">
     </#if>
 </@layout.standardPage>

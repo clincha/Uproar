@@ -15,10 +15,6 @@
     color: black;
 }
 
-.exploreMore {
-    float: right;
-}
-
 .card1 {
     grid-column: 1;
     grid-row: 1;

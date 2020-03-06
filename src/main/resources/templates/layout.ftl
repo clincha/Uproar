@@ -43,5 +43,18 @@
     <!-- Scripts -->
     <#nested "scripts">
     </body>
-    </html>
+</html>
+</#macro>
+
+<#macro card title description link linkText>
+    <div class="card">
+        <img class="card-img-top" src="image/Placeholder.jpg" alt="Image for ${title}'s event">
+        <div class="card-body">
+            <h5 class="card-title">${title}</h5>
+            <p class="card-text">${description}</p>
+            <#if link?has_content && linkText?has_content>
+                <a href="${link}" class="btn btn-primary">${linkText}</a>
+            </#if>
+        </div>
+    </div>
 </#macro>

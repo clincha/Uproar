@@ -5,10 +5,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
-import java.util.Arrays;
 
 @Entity
-public class FileEntity {
+public class File {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,10 +20,10 @@ public class FileEntity {
   @Lob
   private byte[] data;
 
-  public FileEntity() {
+  public File() {
   }
 
-  public FileEntity(String filename, String contentType, byte[] data) {
+  public File(String filename, String contentType, byte[] data) {
     this.filename = filename;
     this.contentType = contentType;
     this.data = data;
@@ -36,7 +35,6 @@ public class FileEntity {
       "id=" + id +
       ", filename='" + filename + '\'' +
       ", contentType='" + contentType + '\'' +
-      ", data=" + Arrays.toString(data) +
       '}';
   }
 

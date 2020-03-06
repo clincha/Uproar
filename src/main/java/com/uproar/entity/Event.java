@@ -18,17 +18,24 @@ public class Event {
 
   private String description;
 
+  private Long imageId;
+
   public Event() {
   }
 
-  public Event(String title, String society, String description) {
+  public Event(String title, String society, String description, Long imageId) {
     this.title = title;
     this.society = society;
     this.description = description;
+    this.imageId = imageId;
   }
 
   public Long getId() {
     return id;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
   }
 
   public void setId(long id) {
@@ -59,6 +66,14 @@ public class Event {
     this.description = description;
   }
 
+  public Long getImageId() {
+    return imageId;
+  }
+
+  public void setImageId(Long image) {
+    this.imageId = image;
+  }
+
   @Override
   public String toString() {
     return "Event{" +
@@ -66,6 +81,7 @@ public class Event {
       ", title='" + title + '\'' +
       ", society='" + society + '\'' +
       ", description='" + description + '\'' +
+      ", imageId=" + imageId +
       '}';
   }
 }
