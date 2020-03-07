@@ -1,0 +1,64 @@
+body {
+
+    background: url("../image/BGblue.png") repeat;
+    color: white;
+}
+h1{
+    font-size: 70px;
+}
+h2,a {
+    text-align: center;
+    color: #7c7c7c;
+}
+
+footer{
+    background-color: white;
+    color: black;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 70px;
+    text-align: right;
+    margin-right: 5%;
+}
+a{
+    color: #7c7c7c;
+}
+img {
+    width: 60%;
+}
+/* this is for the listings*/
+
+li {
+    margin: auto;
+    text-align: center;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+
+    padding: 2%;
+}
+
+.title {
+    color: grey;
+    font-size: 18px;
+}
+
+button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+
+button:hover, a:hover {
+    opacity: 0.7;
+}
