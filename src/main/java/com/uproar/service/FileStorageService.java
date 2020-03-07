@@ -42,7 +42,7 @@ public class FileStorageService {
       try {
         fileEntity = storeFile(file);
       } catch (IOException e) {
-        System.out.println("One of the many file upload died");
+        System.out.println("Could not upload file: " + file.getName());
         e.printStackTrace();
       }
       list.add(fileEntity);
