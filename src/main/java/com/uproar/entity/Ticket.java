@@ -24,9 +24,7 @@ public class Ticket {
 
   public Ticket(Event event) {
     this.event = event;
-    Random random = new Random();
     this.barcode = (long) (Math.random() * 1000000000000L);
-    ;
   }
 
   public Long getId() {
