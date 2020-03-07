@@ -16,7 +16,7 @@
             <div class="card-container">
                 <#items as ticket>
                     <div class="card">
-                        <img src="/file/${ticket.event.imageId}" alt="Event Photo">
+                        <img src="/file/${ticket.event.imageId}" alt="Event Photo" width="100%">
                         <h1>${ticket.event.title}</h1>
                         <svg class="barcode"
                              jsbarcode-format="upc"

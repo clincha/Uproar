@@ -3,8 +3,18 @@
         <div class="menu-icon">
             <i class="fa fa-bars fa-5x"></i>
         </div>
-        <div class="logo">
-            UpRoar
+        <div class="logo"><a href="/"> <style>
+                    a{
+                        color: #ffffff;
+                    }
+                    a:hover{
+                        color: #ffffff;
+                    }
+                    a:active {
+                        color: #ffffff;
+                    }
+                </style>
+                UpRoar</a>
         </div>
         <div class="menu">
             <ul>
