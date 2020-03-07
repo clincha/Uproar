@@ -9,7 +9,6 @@ body {
     background-color: #4C0099;
     height: 500px;
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
     position: relative;
 }
@@ -29,15 +28,6 @@ body {
 
 h1 {
     color: #0093D0;
-}
-
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-    background-color: #ffff;
-    padding: 10px;
-
 }
 
 article {

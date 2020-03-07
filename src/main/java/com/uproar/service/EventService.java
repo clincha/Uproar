@@ -1,16 +1,22 @@
 package com.uproar.service;
 
+import com.uproar.controller.FileStorageController;
+import com.uproar.dao.EventDao;
 import com.uproar.entity.Event;
 import com.uproar.repositry.EventRepository;
 import org.springframework.stereotype.Service;
+
+import java.io.IOException;
 
 @Service
 public class EventService {
 
   private EventRepository eventRepository;
+  private FileStorageController fileStorageController;
 
-  public EventService(EventRepository eventRepository) {
+  public EventService(EventRepository eventRepository, FileStorageController fileStorageController) {
     this.eventRepository = eventRepository;
+    this.fileStorageController = fileStorageController;
   }
 
   public Event getEvent(long id) {
@@ -21,7 +27,16 @@ public class EventService {
     return eventRepository.save(event);
   }
 
+  public Event createEvent(EventDao eventDao) throws IOException {
+    Long fileId = fileStorageController.uploadFile(eventDao.getImage()).getId();
+    return createEvent(new Event(eventDao.getTitle(), eventDao.getSociety(), eventDao.getDescription(), fileId));
+  }
+
   public Iterable<Event> getAllEvents() {
+    return eventRepository.findAll();
+  }
+
+  public Iterable<Event> getPopularEvents() {
     return eventRepository.findAll();
   }
 }

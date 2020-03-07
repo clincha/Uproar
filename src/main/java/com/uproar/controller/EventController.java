@@ -1,6 +1,6 @@
 package com.uproar.controller;
 
-import com.uproar.entity.Event;
+import com.uproar.dao.EventDao;
 import com.uproar.service.EventService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.io.IOException;
 
 @Controller
 @RequestMapping("/event")
@@ -21,13 +23,12 @@ public class EventController {
 
   @GetMapping("/create")
   public ModelAndView createEventPage() {
-    return new ModelAndView("events/create event");
+    return new ModelAndView("events/createEvent");
   }
 
   @PostMapping("/create")
-  public ModelAndView createEvent(Event event) {
-    event = eventService.createEvent(event);
-    return getEvent(event.getId());
+  public ModelAndView createEvent(EventDao eventDao) throws IOException {
+    return getEvent(eventService.createEvent(eventDao).getId());
   }
 
   @GetMapping("/{id}")

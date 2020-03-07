@@ -15,23 +15,31 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
   @Override
   protected void configure(HttpSecurity http) throws Exception {
+
     http
       .authorizeRequests()
-      .antMatchers("/", "/home").permitAll()
-      .anyRequest().authenticated()
-      .and()
-      .formLogin()
-      .permitAll()
-      .and()
-      .logout()
-      .permitAll();
+      .antMatchers("/").permitAll()
+      .antMatchers("/home/**").permitAll()
+      .antMatchers("/h2/**").permitAll()
+      .antMatchers("/css/**").permitAll()
+      .antMatchers("/image/**").permitAll()
+      .antMatchers("/js/**").permitAll()
+      .antMatchers("/test/**").permitAll()
+      .antMatchers("/files/**").permitAll()
+      .antMatchers("/faivicon.ico").permitAll()
+      .antMatchers("/**").permitAll()
+      .anyRequest().permitAll();
+
+    http.headers().frameOptions().disable();
+    http.csrf().disable();
   }
 
   @Bean
   @Override
   public UserDetailsService userDetailsService() {
     UserDetails user =
-      User.withDefaultPasswordEncoder()
+      User.
+        withDefaultPasswordEncoder()
         .username("user")
         .password("password")
         .roles("USER")
