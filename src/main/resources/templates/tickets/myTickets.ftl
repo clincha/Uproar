@@ -19,14 +19,12 @@
                         <div class="card">
                             <img src="image/BGblue.png" alt="eventphoto" style="width:100%">
                             <h1>${ticket.event.title}</h1>
-                            <p>
-                                <svg class="barcode"
-                                     jsbarcode-format="upc"
-                                     jsbarcode-value="${ticket.barcode?c}" <#-- this is where the barcode for ticket goes is ID? [${ticket.getId()}] -->
-                                     jsbarcode-textmargin="0"
-                                     jsbarcode-fontoptions="bold">
-                                </svg>
-                            </p>
+                            <svg class="barcode"
+                                 jsbarcode-format="upc"
+                                 jsbarcode-value="${ticket.barcode?c}" <#-- this is where the barcode for ticket goes is ID? [${ticket.getId()}] -->
+                                 jsbarcode-textmargin="0"
+                                 jsbarcode-fontoptions="bold">
+                            </svg>
                             <a href="/event/${ticket.event.id}">More information</a>
                         </div>
                         Event: ${ticket.event.title} [${ticket.id}]

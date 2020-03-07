@@ -29,7 +29,7 @@
                 <#list events as event>
                     <div id="event-${event.id}" class="card">
                         <a href="/event/${event.id}">
-                            <img src="image/Placeholder.jpg" class="card-img-top" alt="Event image">
+                            <img src="/file/${event.imageId}" class="card-img-top" alt="Event image">
                         </a>
                         <div class="card-body">
                             <h5 class="card-title">${event.title}</h5>
