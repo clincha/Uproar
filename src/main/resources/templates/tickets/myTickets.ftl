@@ -2,57 +2,49 @@
 <div class="page>"
 <@layout.standardPage; section>
     <#if section = "scripts">
-    <#-- javascript tags go in here -->
         <script src="https://cdn.jsdelivr.net/jsbarcode/3.6.0/JsBarcode.all.min.js"></script>
         <script>
             JsBarcode(".barcode").init();
         </script>
-
-</#if>
+    </#if>
     <#if section = "styles">
-
         <link rel="stylesheet" href="/css/MyTicket.css">
     </#if>
     <#if section="content">
         <h1>My Tickets</h1>
-        <hr>
         <#list tickets>
             <ul>
                 <#items as ticket>
                     <li>
-
                         <div class="card">
-                            <img src="../image/BGblue.png" alt="eventphoto" style="width:100%">
-                            <h1> <#-- ${ticket.getEvent().getTitle()}--> test </h1>
-                            <p class="title">test <#-- ${ticket.getEvent().getTitle()}--> </p>
-                            <p> <svg class="barcode"
+                            <img src="image/BGblue.png" alt="eventphoto" style="width:100%">
+                            <h1>${ticket.event.title}</h1>
+                            <p>
+                                <svg class="barcode"
                                      jsbarcode-format="upc"
-                                     jsbarcode-value="123456789012" <#-- this is where the barcode for ticket goes is ID? [${ticket.getId()}] -->
+                                     jsbarcode-value="${ticket.barcode?c}" <#-- this is where the barcode for ticket goes is ID? [${ticket.getId()}] -->
                                      jsbarcode-textmargin="0"
                                      jsbarcode-fontoptions="bold">
                                 </svg>
                             </p>
-                            <p><button href="#">More Info</button></p>
+                            <a href="/event/${ticket.event.id}">More information</a>
                         </div>
-                        Event: ${ticket.getEvent().getTitle()} [${ticket.getId()}]
+                        Event: ${ticket.event.title} [${ticket.id}]
                     </li>
                 </#items>
             </ul>
         <#else>
 
             <br>
-           <h2> You have no tickets! Take a look at the <a href="/event/all"> <i>events available near you. </i></a><br>
-               <img class ='whoops' src="../image/BG.jpg" alt="BG">
-               </h2>
+            <h2> You have no tickets! Take a look at the <a href="/event/all"> <i>events available near
+                        you. </i></a><br>
+                <img class='whoops' src="../image/BG.jpg" alt="BG">
+            </h2>
 
-
-
-
-        <div class="image"></div>
+            <div class="image"></div>
         </#list>
         <footer>
-        <a href="/">Uproar</a>
+            <a href="/">Uproar</a>
         </footer>
     </#if>
-    </div>
 </@layout.standardPage>

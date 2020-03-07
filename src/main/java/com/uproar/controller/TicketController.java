@@ -35,7 +35,7 @@ public class TicketController {
 
   @GetMapping("/myTickets")
   public ModelAndView myTickets() {
-    return new ModelAndView("/tickets/myTickets")
+    return new ModelAndView("tickets/myTickets")
       .addObject("tickets", ticketService.getAllTickets());
   }
 
