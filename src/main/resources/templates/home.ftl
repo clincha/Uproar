@@ -43,12 +43,5 @@
                 <a href="/event/all">Explore more...</a>
             </div>
         </div>
-
-        <footer>
-            <div class="socialposition">
-                <br>
-                <@social.social></@social.social>
-            </div>
-        </footer>
     </#if>
 </@layout.standardPage>
