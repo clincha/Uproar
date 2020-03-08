@@ -31,8 +31,7 @@ h1 {
     --input-padding-y: 0.75rem;
 }
 
-.login,
-.image {
+.login {
     min-height: 100vh;
 }
 
