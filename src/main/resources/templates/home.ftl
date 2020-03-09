@@ -10,7 +10,6 @@
     <#if section = "styles">
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/social.css">
-        <link rel="stylesheet" href="css/events.css">
     </#if>
     <#if section = "content">
 
