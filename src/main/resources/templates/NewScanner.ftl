@@ -119,48 +119,48 @@
         </style>    </#if>
     <#if section="content">
     <#-- This is where the main content of the page would go, this section sits inbetween the body tags -->
-    </#if>
-</@layout.standardPage>
-<div class="container">
-<h1> Scan Barcode here</h1>
-<div class="row">
-    <div class="col-lg-6">
-        <div class="input-group">
-            <input id="scanner_input" class="form-control" placeholder="Click the button to scan an EAN..." type="text" />
-            <span class="input-group-btn">
+        <div class="container">
+            <h1> Scan Barcode here</h1>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <input id="scanner_input" class="form-control" placeholder="Click the button to scan an EAN..." type="text" />
+                        <span class="input-group-btn">
 				<button class="btn btn-default btn-lg" type="button" data-toggle="modal" data-target="#livestream_scanner">
 					<i class="fa fa-barcode"></i>
 				</button>
 			</span>
-        </div><!-- /input-group -->
-    </div><!-- /.col-lg-6 -->
-    <span class="input-group-btn">
+                    </div><!-- /input-group -->
+                </div><!-- /.col-lg-6 -->
+                <span class="input-group-btn">
 				<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#livestream_scanner">
 					Scan Barcode
 				</button>
 			</span>
-</div><!-- /.row -->
-<div class="modal" id="livestream_scanner">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <h4 class="modal-title">Barcode Scanner</h4>
-            </div>
-            <div class="modal-body" style="position: static">
-                <div id="interactive" class="viewport"></div>
-                <div class="error"></div>
-            </div>
-            <div class="modal-footer">
-                <label class="btn btn-default pull-left">
-                    <i class="fa fa-camera"></i> Use camera app
-                    <input type="file" accept="image/*;capture=camera" capture="camera" class="hidden" />
-                </label>
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-</div>
+            </div><!-- /.row -->
+            <div class="modal" id="livestream_scanner">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title">Barcode Scanner</h4>
+                        </div>
+                        <div class="modal-body" style="position: static">
+                            <div id="interactive" class="viewport"></div>
+                            <div class="error"></div>
+                        </div>
+                        <div class="modal-footer">
+                            <label class="btn btn-default pull-left">
+                                <i class="fa fa-camera"></i> Use camera app
+                                <input type="file" accept="image/*;capture=camera" capture="camera" class="hidden" />
+                            </label>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+        </div>
+    </#if>
+</@layout.standardPage>
