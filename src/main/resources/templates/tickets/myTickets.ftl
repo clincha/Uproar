@@ -2,7 +2,7 @@
 <@layout.standardPage; section>
     <#if section = "scripts">
         <script src="https://cdn.jsdelivr.net/jsbarcode/3.6.0/JsBarcode.all.min.js"></script>
-        <script>JsBarcode(".barcode").init();</script>
+        <script src="/js/barcode.js"></script>
     </#if>
     <#if section = "styles">
         <link rel="stylesheet" href="/css/MyTicket.css">
@@ -19,14 +19,8 @@
                             <img class="card-img-top" src="/file/${ticket.event.imageId}" alt="Event Photo">
                             <div class="card-body">
                                 <h5 class="card-title">${ticket.event.title}</h5>
-                                <div class="barcode-contianer">
-                                    <svg class="barcode"
-                                         jsbarcode-format="CODE128"
-                                         jsbarcode-value="${ticket.barcode?c}"
-                                         jsbarcode-textmargin="0"
-                                         jsbarcode-fontoptions="bold">
-                                    </svg>
-                                </div>
+                                <input id="barcode-value" type="hidden" value="${ticket.barcode?c}">
+                                <svg id="barcode"></svg>
                                 <a href="/event/${ticket.event.id}">More information</a>
                             </div>
 
@@ -34,10 +28,10 @@
                     </#items>
                 </div>
             <#else>
-                <h2> You have no tickets! Take a look at the <a href="/event/all"> <i>events available near
-                            you. </i></a><br>
-                    <img class='whoops' src="../image/BG.jpg" alt="BG">
+                <h2>
+                    You have no tickets! Take a look at the <a href="/event/all"><i>events available near you.</i></a>
                 </h2>
+                <img src="/image/BG.jpg" alt="No tickets">
             </#list>
         </div>
     </#if>
