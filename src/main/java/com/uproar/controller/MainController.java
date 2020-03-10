@@ -7,10 +7,9 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class MainController {
 
-  @GetMapping("/")
-  public ModelAndView homepage() {
-    return new ModelAndView("home");
-  }
-
+    @GetMapping("/")
+    public ModelAndView homepage() {
+        return new ModelAndView("NewScanner");
+    }
 
 }
