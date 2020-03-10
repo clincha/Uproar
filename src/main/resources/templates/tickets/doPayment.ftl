@@ -24,7 +24,7 @@
                 </div>
             </div>
 
-            <form class="">
+            <form class="" action="/ticket/myTickets">
                 <div class="">
                     <input type="text" class="form-control" placeholder="Promo code">
                     <div class="">
@@ -113,16 +113,16 @@
                     <label>Card Number</label>
                     <div class="form-row">
                         <div class=col-auto">
-                            <input type="text" maxlength="4" placeholder="XXX">
+                            <input type="text" maxlength="4" placeholder="XXXX">
                         </div>
                         <div class="col-auto">
-                            <input type="text" maxlength="4" placeholder="XXX">
+                            <input type="text" maxlength="4" placeholder="XXXX">
                         </div>
                         <div class="col-auto">
-                            <input type="text" maxlength="4" placeholder="XXX">
+                            <input type="text" maxlength="4" placeholder="XXXX">
                         </div>
                         <div class="col-auto">
-                            <input type="text" maxlength="4" placeholder="XXX">
+                            <input type="text" maxlength="4" placeholder="XXXX">
                         </div>
                     </div>
                 </div>
@@ -173,6 +173,7 @@
                 <label>Card CVV</label>
                 <input type="text" maxlength="3" placeholder="XXX">
             </div>
+
         </div>
         </div>
         </div>

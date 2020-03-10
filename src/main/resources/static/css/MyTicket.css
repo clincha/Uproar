@@ -1,3 +1,56 @@
 .grid-image {
     width: 100%;
 }
+
+
+
+body {
+    background: url("../image/BG.jpg") no-repeat;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: lighter;
+}
+footer{
+    font-size: 50px;
+    background-color: white;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: normal;
+    color: black;
+    text-align: right;
+    position: absolute;
+    right: 0%;
+    bottom: 0;
+    left: 0;
+
+
+}
+h1{
+    text-align: left;
+}
+h1,h2{
+    color: white;
+    text-align: center;
+}
+img
+{
+max-height: 60%;
+    max-width: 80%;
+    margin: 0;
+}
+
+card{
+    text-align: center;
+}
+a,a:active {
+
+    color: #f4f4f4;
+}
+.uproar{
+    padding-right: 2%;
+}
+.centre{
+    text-align: center;
+}
+
+.moreinfo{
+    background-color: #777777;
+}
