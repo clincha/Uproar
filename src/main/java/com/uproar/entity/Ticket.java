@@ -5,7 +5,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import java.util.Random;
 
 @Entity
 public class Ticket {
@@ -17,13 +16,16 @@ public class Ticket {
   @ManyToOne
   private Event event;
 
+  private String ticketHolder;
+
   private long barcode;
 
   public Ticket() {
   }
 
-  public Ticket(Event event) {
+  public Ticket(Event event, String ticketHolder) {
     this.event = event;
+    this.ticketHolder = ticketHolder;
     this.barcode = (long) (Math.random() * 1000000000000L);
   }
 
@@ -49,5 +51,13 @@ public class Ticket {
 
   public void setBarcode(long barcode) {
     this.barcode = barcode;
+  }
+
+  public String getTicketHolder() {
+    return ticketHolder;
+  }
+
+  public void setTicketHolder(String ticketHolder) {
+    this.ticketHolder = ticketHolder;
   }
 }

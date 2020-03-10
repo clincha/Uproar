@@ -2,6 +2,8 @@ package com.uproar.service;
 
 import com.uproar.entity.Ticket;
 import com.uproar.repositry.TicketRepository;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -20,7 +22,8 @@ public class TicketService {
   }
 
   public Ticket buyTicket(Long eventId) {
-    Ticket ticket = new Ticket(eventService.getEvent(eventId));
+    String ticketHolder = ((User) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUsername();
+    Ticket ticket = new Ticket(eventService.getEvent(eventId), ticketHolder);
     return ticketRepository.save(ticket);
   }
 }

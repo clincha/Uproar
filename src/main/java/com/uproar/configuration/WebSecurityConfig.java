@@ -27,13 +27,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
       .antMatchers("/test/**").permitAll()
       .antMatchers("/files/**").permitAll()
       .antMatchers("/faivicon.ico").permitAll()
-      .anyRequest().authenticated();
-
-    http
+      .anyRequest().authenticated()
+      .and()
       .formLogin();
-
-    http
-      .logout();
 
     http.headers().frameOptions().disable();
     http.csrf().disable();
@@ -45,21 +41,21 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     return new InMemoryUserDetailsManager(
       User.
         withDefaultPasswordEncoder()
-        .username("aglc2")
+        .username("Angus")
         .password("password")
         .roles("USER")
         .build()
       ,
       User.
         withDefaultPasswordEncoder()
-        .username("sd585")
+        .username("Sam")
         .password("password")
         .roles("USER")
         .build()
       ,
       User.
         withDefaultPasswordEncoder()
-        .username("tn229")
+        .username("Tattenda")
         .password("password")
         .roles("USER")
         .build()

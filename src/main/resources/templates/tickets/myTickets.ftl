@@ -18,6 +18,7 @@
                         <div class="card">
                             <img class="card-img-top" src="/file/${ticket.event.imageId}" alt="Event Photo">
                             <div class="card-body">
+                                <h1>${ticket.ticketHolder}</h1>
                                 <h5 class="card-title">${ticket.event.title}</h5>
                                 <input id="barcode-value" type="hidden" value="${ticket.barcode?c}">
                                 <svg id="barcode"></svg>
