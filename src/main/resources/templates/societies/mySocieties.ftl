@@ -18,7 +18,7 @@
             <h2>
                 You're not a member of any societies.<br>
                 <a href="/search"><i>Search for a society.</i></a><br>
-                <a href="/event/all"><i>Or Create your own!</i></a>
+                <a href="/societies/all"><i>Or Create your own!</i></a>
             </h2>
 
 

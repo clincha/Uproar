@@ -25,7 +25,9 @@
                             <br>
                             <div class="moreinfo">
                                 <p class="card-text"><small class="text-muted">
-                                        <a href="/event/${event.id}">More information</a>
+                                        <a href="/event/${event.id}">More Information</a><br>
+                                        <a href="/event/scan/${event.id}">Book tickets In</a><br>
+
                             </div></div></div>
                                </div>
             </#items>
