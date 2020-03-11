@@ -2,7 +2,7 @@
 
 <@layout.standardPage; section>
     <#if section = "scripts">
-    <#-- javascript tags go in here -->
+
     </#if>
     <#if section = "styles">
     <#-- Import your stylesheets here -->
