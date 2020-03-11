@@ -5,7 +5,7 @@
     <#-- javascript tags go in here -->
     </#if>
     <#if section = "styles">
-     <link rel="stylesheet" href="/css/MyTicket.css">
+     <link rel="stylesheet" href="/css/myPages.css">
     </#if>
 
     <#if section="content">

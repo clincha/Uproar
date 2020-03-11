@@ -19,7 +19,7 @@ public class SocietyController {
 
   @GetMapping("/societies")
   public ModelAndView homepage() {
-    return new ModelAndView("societies/societies")
+    return new ModelAndView("societies/mySocieties")
       .addObject("SocialLinks", societyService.getSocialLinks())
       .addObject("events", eventService.getAllEvents());
   }

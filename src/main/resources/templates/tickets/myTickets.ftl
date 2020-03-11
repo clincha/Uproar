@@ -6,7 +6,7 @@
         <script src="/js/barcode.js"></script>
     </#if>
     <#if section = "styles">
-        <link rel="stylesheet" href="/css/MyTicket.css">
+        <link rel="stylesheet" href="/css/myPages.css">
     </#if>
     <#if section="content">
         <div class="container-fluid">
