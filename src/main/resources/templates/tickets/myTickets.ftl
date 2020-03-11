@@ -17,13 +17,12 @@
                     <#items as ticket>
                         <div class="card">
                             <img class="card-img-top" src="/file/${ticket.event.imageId}" alt="Event Photo">
-                            <div class="card-body">
+                            <div class="card-body barcode-holder">
                                 <h5 class="card-title">${ticket.event.title}</h5>
                                 <input id="barcode-value" type="hidden" value="${ticket.barcode?c}">
                                 <svg id="barcode"></svg>
                                 <a href="/event/${ticket.event.id}">More information</a>
                             </div>
-
                         </div>
                     </#items>
                 </div>
