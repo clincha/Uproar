@@ -27,6 +27,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
       .antMatchers("/test/**").permitAll()
       .antMatchers("/files/**").permitAll()
       .antMatchers("/faivicon.ico").permitAll()
+      .antMatchers("/ticket/valid").permitAll()
       .anyRequest().authenticated();
 
     http

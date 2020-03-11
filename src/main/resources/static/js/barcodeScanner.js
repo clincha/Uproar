@@ -74,7 +74,30 @@ $(function () {
     // the barcode had actually been found.
     Quagga.onDetected(function (result) {
         if (result.codeResult.code) {
-            $('#scanner_input').val(result.codeResult.code);
+            let barcodeValue = result.codeResult.code;
+            let eventId = document.getElementById("eventId").value;
+            $.ajax({
+                url: "/ticket/valid",
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                data: JSON.stringify({
+                    event_id: eventId,
+                    barcode: barcodeValue
+                }),
+                type: 'POST',
+                success: function (responseData) {
+                    console.log(responseData);
+                    if (responseData === true) {
+                        document.getElementById("validTicket").hidden = false;
+                        document.getElementById("invalidTicket").hidden = true;
+                    } else {
+                        document.getElementById("validTicket").hidden = true;
+                        document.getElementById("invalidTicket").hidden = false;
+                    }
+                }
+            });
             Quagga.stop();
             setTimeout(function () {
                 $('#livestream_scanner').modal('hide');

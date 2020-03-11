@@ -6,6 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 @Entity
 public class Ticket {
@@ -19,13 +20,15 @@ public class Ticket {
 
   private long barcode;
 
+  private boolean used;
+
   public Ticket() {
   }
 
   public Ticket(Event event) {
     this.event = event;
-    Random random = new Random();
-    this.barcode = random.nextLong();
+    this.barcode = ThreadLocalRandom.current().nextLong(1000000000000L,999999999999L);
+    this.used = false;
   }
 
   public Long getId() {
@@ -50,5 +53,13 @@ public class Ticket {
 
   public void setBarcode(long barcode) {
     this.barcode = barcode;
+  }
+
+  public boolean isUsed() {
+    return used;
+  }
+
+  public void setUsed(boolean used) {
+    this.used = used;
   }
 }

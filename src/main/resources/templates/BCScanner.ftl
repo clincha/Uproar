@@ -64,5 +64,8 @@
                 </div>
             </div>
         </div>
+        <input id="eventId" type="hidden" value="${event.getId()}">
+        <h1 id="validTicket" hidden>SUCCESS!</h1>
+        <h1 id="invalidTicket" hidden>FAILURE!</h1>
     </#if>
 </@layout.standardPage>
