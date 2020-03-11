@@ -20,7 +20,7 @@
                             <br>
                             <img class="card-img-top" src="/file/${ticket.event.imageId}" alt="Event Photo">
 
-                            <div class="card-body">
+                            <div class="card-body barcode-holder">
                                 <div class="centre">
                                 <h5 class="card-title">${ticket.event.title}</h5>
                                 <input id="barcode-value" type="hidden" value="${ticket.barcode?c}">
@@ -32,7 +32,6 @@
                                             <br>
                                             <a href="/event/sell/${ticket.event.id}">Sell Ticket</a>
                             </div></div></div></div>
-
                         </div>
                     </#items>
                 </div>
