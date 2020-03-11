@@ -1,15 +1,31 @@
-<#import "../layout.ftl" as layout>
-<#import "../navbar.ftl" as navbar>
+<#import "layout.ftl" as layout>
+<#import "header.ftl" as header>
+
 <@layout.standardPage; section>
+
     <#if section = "scripts">
-    <#-- javascript tags go in here -->
+
+        <script type="text/javascript">
+
+        </script>
+
     </#if>
     <#if section = "styles">
-    <#-- Import your stylesheets here -->
+        <link rel="stylesheet" type="text/css"
+              href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+              crossorigin="anonymous">
+        <!-- Icons and fonts -->
+        <link rel="stylesheet" type="text/css"
+              href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css"
+              href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding&display=swap">
+        <link rel="stylesheet" type="text/css"
+              href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
         <link rel="stylesheet" type="text/css" href="css/search.css">
     </#if>
     <#if section="content">
-
+        <body>
         <!-- Image and text -->
         <nav class="navbar navbar-dark bg-dark">
             <a class="navbar-brand" href="#">
@@ -17,12 +33,12 @@
             </a>
         </nav>
 
-        <br/>
+        </nav>
         <section>
             <br/>
             <div class="container">
                 <h1>
-                    Tickets Up for Grabs
+                    Search Events
                 </h1>
                 <div class="col-sm-12"></div>
                 <div class="search_box">
@@ -31,7 +47,7 @@
                 </div>
                 <div>
                     <br/>
-                    <div class col-sm-3>
+                    <div class col-sm-3>c
                         <h3 id="filter">Filters</h3>
                         <div class="row">
                             <div class="col-12">
@@ -282,53 +298,71 @@
             <br/>
         </section>
 
-        <div class="container">
+            <div class="container ">
+                <h1>Search Results</h1>
+                <div class="bg-white rounded shadow-sm">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="card">
+                                <a href="/event/1">
+                                    <img src="../image/Placeholder.jpg" class="card-img-top" alt="...">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">Event Example</h5>
+                                    <p class="card-text">Here we will need the bio of the event, can just have event
+                                        name,
+                                        time
+                                        place society etc</p>
+                                </div>
+                            </div>
 
-            <div class="card-deck">
-                <div class="card">
-                    <img src="../image/Placeholder.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below...<br/> <a> read more</a>
-                        </p>
+                            <div class="card">
+                                <a href="/event/1">
+                                    <img src="../image/Placeholder.jpg" class="card-img-top" alt="...">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">Event Example</h5>
+                                    <p class="card-text">Here we will need the bio of the event, can just have event
+                                        name,
+                                        time
+                                        place society etc</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="/event/1">
+                                    <img src="../image/Placeholder.jpg" class="card-img-top" alt="...">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">Event Example</h5>
+                                    <p class="card-text">Here we will need the bio of the event, can just have event
+                                        name,
+                                        time
+                                        place society etc</p>
+                                </div>
+                            </div>
 
-                        <a href="#" class="btn btn-success btn-lg">Buy Ticket</a>
+
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mapouter">
+                                <div class="gmap_canvas">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2494.834994965505!2d1.0657662934985892!3d51.29576052639414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47decba691cd5653%3A0x559a97b0c841cf74!2sThe%20Venue!5e0!3m2!1sen!2sus!4v1583787854488!5m2!1sen!2sus"
+                                            width="800" height="600" frameborder="0" style="border:0;"
+                                            allowfullscreen=""></iframe>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
                     </div>
-                </div>
-                <div class="card">
-                    <img src="../image/Placeholder.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below...<br/> <a> read more</a>
-                        </p>
 
-                        <a href="#" class="btn btn-success btn-lg">Buy Ticket</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="../image/Placeholder.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below...<br/> <a> read more</a>
-                        </p>
 
-                        <a href="#" class="btn btn-success btn-lg">Buy Ticket</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="../image/Placeholder.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below...<br/> <a> read more</a>
-                        </p>
-
-                        <a href="#" class="btn btn-success btn-lg">Buy Ticket</a>
-                    </div>
                 </div>
             </div>
-        </div>
+        </body>
 
-        <button type="button">View More Tickets</button>
 
     </#if>
 </@layout.standardPage>

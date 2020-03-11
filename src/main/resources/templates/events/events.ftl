@@ -1,27 +1,23 @@
 <#import "../layout.ftl" as layout>
-
 <#import "../navbar.ftl" as navbar>
 
-<#macro events>
-    <#import "../navbar.ftl" as navbar>
 
     <@layout.standardPage; section>
         <#if section = "scripts">
-            <script src="../../static/js/script.js"></script>
+            <script src="js/script.js"></script>
 
         <#-- javascript tags go in here -->
         </#if>
         <#if section = "styles">
         <#-- Import your stylesheets here -->
-            <link rel="stylesheet" href="./style.css">
+            <link rel="stylesheet" href="css/style.css">
 
         </#if>
 
         <#if section="content">
         <#-- This is where the main content of the page would go, this section sits inbetween the body tags -->
-            <nav>
-                <@navbar.navbar></@navbar.navbar>
-            </nav>
+            <@navbar.navbar></@navbar.navbar>
+
             <section id="page-title">
                 <div class="banner-image">
                     <h1> Kent Rugby Presents: the Social</h1>
@@ -77,4 +73,3 @@
             </section>
         </#if>
     </@layout.standardPage>
-</#macro>
