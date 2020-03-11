@@ -31,7 +31,7 @@
                 </div>
                 <div>
                     <br/>
-                    <div class col-sm-3>c
+                    <div class col-sm-3>
                         <h3 id="filter">Filters</h3>
                         <div class="row">
                             <div class="col-12">
