@@ -1,12 +1,15 @@
 
 body {
     font: 15px/1.5 Arial, Helvetica, sans-serif;
+    background: url("/image/BG.jpg") no-repeat;
+}
+.container{
+    background-color: #ffffff;
 
 }
 
-#main-content {
-    background: url("/image/BG.jpg") no-repeat;
-    background-color: #4C0099;
+.main-content {
+
     height: 500px;
     background-position: center;
     background-size: cover;
@@ -14,9 +17,9 @@ body {
 }
 
 .banner-image {
-    background: url("./image/placeholder-event.jpg") no-repeat;
+    background: url("/image/placeholder.jpg") no-repeat;
     background-size: cover;
-    width: 80%;
+    width: 100%;
     margin: auto;
     overflow: hidden;
     background-color: #ffff;
@@ -26,11 +29,12 @@ body {
 
 }
 
-h1 {
-    color: #0093D0;
-}
+/*h1 {*/
+/*    color: #0093D0;*/
+/*}*/
 
 article {
+    background-color: #ffffff;
     float: left;
     width: 65%;
 }
@@ -46,4 +50,5 @@ article {
     width: 30%;
     padding: 10px;
 }
+
   
