@@ -40,9 +40,15 @@ max-height: 60%;
 card{
     text-align: center;
 }
-a,a:active {
+.ticket-event {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
 
-    color: #f4f4f4;
+    padding: 2%;
+}
+.title {
+    color: grey;
+    font-size: 18px;
 }
 .uproar{
     padding-right: 2%;

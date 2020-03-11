@@ -1,0 +1,26 @@
+.search_box{
+    width: 100%;
+    position: relative;
+}
+
+.search_box input[type="text"]{
+    width: 100%;
+    padding: 15px;
+
+    box-sizing: border-box;
+    background: white;
+    border: 2px solid rgb(66, 1, 126);
+    border-radius: 10px;
+    font-size: 18px;
+    color: black;
+
+}
+
+.fa-search{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 25px;
+    color:rgb(66, 1, 126);
+    font-size: 25px;
+}
