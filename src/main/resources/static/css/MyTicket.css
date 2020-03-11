@@ -1,36 +1,43 @@
-body {
+.grid-image {
+    width: 100%;
+}
 
-    background: url("../image/BGblue.png") repeat;
-    color: white;
+
+
+body {
+    background: url("../image/BG.jpg") no-repeat;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: lighter;
+}
+footer{
+    font-size: 50px;
+    background-color: white;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: normal;
+    color: black;
+    text-align: right;
+    position: absolute;
+    right: 0%;
+    bottom: 0;
+    left: 0;
+
+
 }
 h1{
-    font-size: 70px;
+    text-align: left;
 }
-h2,a {
+h1,h2{
+    color: white;
     text-align: center;
-    color: #7c7c7c;
+}
+img
+{
+max-height: 60%;
+    max-width: 80%;
+    margin: 0;
 }
 
-footer{
-    background-color: white;
-    color: black;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    font-size: 70px;
-    text-align: right;
-    margin-right: 5%;
-}
-a{
-    color: #7c7c7c;
-}
-img {
-    width: 60%;
-}
-/* this is for the listings*/
-
-li {
-    margin: auto;
+card{
     text-align: center;
 }
 .ticket-event {
@@ -43,21 +50,13 @@ li {
     color: grey;
     font-size: 18px;
 }
-
-button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
+.uproar{
+    padding-right: 2%;
+}
+.centre{
     text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
 }
 
-
-button:hover, a:hover {
-    opacity: 0.7;
+.moreinfo{
+    background-color: #777777;
 }

@@ -10,7 +10,6 @@
     <#if section = "styles">
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/social.css">
-        <link rel="stylesheet" href="css/events.css">
     </#if>
     <#if section = "content">
 
@@ -43,12 +42,5 @@
                 <a href="/event/all">Explore more...</a>
             </div>
         </div>
-
-        <footer>
-            <div class="socialposition">
-                <br>
-                <@social.social></@social.social>
-            </div>
-        </footer>
     </#if>
 </@layout.standardPage>

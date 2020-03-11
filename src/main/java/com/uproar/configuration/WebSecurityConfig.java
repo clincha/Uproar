@@ -6,13 +6,13 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
   @Override
   protected void configure(HttpSecurity http) throws Exception {
 
@@ -27,8 +27,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
       .antMatchers("/test/**").permitAll()
       .antMatchers("/files/**").permitAll()
       .antMatchers("/faivicon.ico").permitAll()
-      .antMatchers("/**").permitAll()
-      .anyRequest().permitAll();
+      .anyRequest().authenticated();
+
+    http
+      .formLogin();
+
+    http
+      .logout();
 
     http.headers().frameOptions().disable();
     http.csrf().disable();
@@ -37,14 +42,27 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
   @Bean
   @Override
   public UserDetailsService userDetailsService() {
-    UserDetails user =
+    return new InMemoryUserDetailsManager(
       User.
         withDefaultPasswordEncoder()
-        .username("user")
+        .username("aglc2")
         .password("password")
         .roles("USER")
-        .build();
-
-    return new InMemoryUserDetailsManager(user);
+        .build()
+      ,
+      User.
+        withDefaultPasswordEncoder()
+        .username("sd585")
+        .password("password")
+        .roles("USER")
+        .build()
+      ,
+      User.
+        withDefaultPasswordEncoder()
+        .username("tn229")
+        .password("password")
+        .roles("USER")
+        .build()
+    );
   }
 }
