@@ -8,14 +8,6 @@ body {
 
 }
 
-.main-content {
-
-    height: 500px;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-}
-
 .banner-image {
     background: url("/image/placeholder.jpg") no-repeat;
     background-size: cover;
@@ -33,16 +25,23 @@ body {
 /*    color: #0093D0;*/
 /*}*/
 
-article {
+.article {
     background-color: #ffffff;
-    float: left;
+   padding-right: 30%;
     width: 65%;
+}
+.card{
+    width: 90%;
 }
 
 .price-box {
     float: right;
     width: 30%;
     padding: 10px;
+    position: absolute;
+    top: 9%;
+    right: 12%;
+
 }
 
 .map {
