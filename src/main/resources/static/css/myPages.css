@@ -30,9 +30,12 @@ h1,h2{
 }
 
 
-card{
+.card{
     text-align: center;
+    margin: 2%;
 }
+
+
 .ticket-event {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
@@ -51,5 +54,9 @@ card{
 }
 
 .moreinfo{
-    background-color: #777777;
+
+}
+button{
+    margin: 5%;
+    width: 80%;
 }
