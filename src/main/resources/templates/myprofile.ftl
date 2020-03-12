@@ -21,12 +21,15 @@
 </#if>
 <#if section = "styles">
 <#-- Import your stylesheets here -->
+    <link rel="stylesheet" type="text/css" href="eventheader.css">
     <link rel="stylesheet" type="text/css" href="css/search.css">
     <link rel="stylesheet" type="text/css" href="css/tabs.css">
 </#if>
 <#if section="content">
 
 <!-- Image and text -->
+<#--<@navbar.navbar></@navbar.navbar> <br><br><br><br><br>-->
+
 <nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand" href="#">
         Navbar to go hear
