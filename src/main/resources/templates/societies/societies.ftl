@@ -17,7 +17,7 @@
             <@navbar.navbar/>
         </header>
         <div class="avatar">
-            <img class="avt" src="image/Placeholder.jpg" alt="Society Picture">
+            <img class="avt" src="image/rugby.png" alt="Society Picture">
         </div>
         <div class="mainblock">
             <br><br><br><br><br><br><br><br>
@@ -50,7 +50,7 @@
             </div></div></div><hr>
             <br>
             <div class="alert alert-danger" role="alert">
-                Remember to Pay your Club dues <a href="https://kentunion.co.uk/activities/rugby-mens"> here!</a>
+              <b>Remember to Pay your Club dues <a href="https://kentunion.co.uk/activities/rugby-mens"> here!</a></b>
             </div>
             <br>
             <hr>
@@ -62,12 +62,7 @@
                 <#list events as event>
 
                     <@layout.card event.title, event.description, "/event/" + event.id, "more info!"/>
-                    <Br>
 
-                    <@layout.card event.title, event.description, "/event/" + event.id, "more info!"/>
-                    <BR>
-
-                        <@layout.card event.title, event.description, "/event/" + event.id, "more info!"/>
                 </#list>
                 </div>
                 <div class="col-sm">
