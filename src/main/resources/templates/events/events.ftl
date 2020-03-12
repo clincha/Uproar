@@ -10,7 +10,7 @@
     </#if>
     <#if section = "styles">
     <#-- Import your stylesheets here -->
-
+        <link rel="stylesheet" href="css/eventheader.css">
         <link rel="stylesheet" href="css/search.css">
         <link rel="stylesheet" href="css/style.css">
 
@@ -18,14 +18,13 @@
 
     <#if section="content">
     <#-- This is where the main content of the page would go, this section sits inbetween the body tags -->
-    <#-- <@navbar.navbar></@navbar.navbar>-->
-        <div class="container">
+        <@navbar.navbar></@navbar.navbar> <br><br><br><br><br>
+        <div  class ="article">
 
-            <div class="search_box">
+            <div class="search_box"> <#-- search box -->
                 <input type="text" placeholder="Search Events">
-                <i class="fa fa-search search-icon"></i>
-            </div>
-            <div  class ="article" style="padding-left: 50px;;padding-right: 50px;padding-top: 50px;padding-bottom: 50px;">
+            </div><br>
+
                 <div id="page-title">
                     <div class="banner-image"></div>
                 </div>

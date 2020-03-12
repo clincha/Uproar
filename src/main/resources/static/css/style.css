@@ -4,7 +4,7 @@ body {
     background: url("/image/BG.jpg") no-repeat;
 }
 .container{
-    background-color: #ffffff;
+   background-color: #ffffff;
 
 }
 
@@ -26,9 +26,12 @@ body {
 /*}*/
 
 .article {
+
+    padding: 50px 40% 50px 50px;
     background-color: #ffffff;
-   padding-right: 30%;
-    width: 65%;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .card{
     width: 90%;
@@ -37,16 +40,18 @@ body {
 .price-box {
     float: right;
     width: 30%;
+    min-width: 30vm;
     padding: 10px;
     position: absolute;
-    top: 9%;
-    right: 12%;
+    top: 20%;
+    right: 1%;
 
 }
 
 .map {
     float: right;
     width: 30%;
+    min-width: 30vm;
     padding: 10px;
 }
 
