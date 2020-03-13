@@ -10,7 +10,7 @@
         </#if>
         <#if section = "styles">
         <#-- Import your stylesheets here -->
-            <link rel="stylesheet" href="css/style.css">
+            <link rel="stylesheet" href="/css/style.css">
 
         </#if>
 

@@ -2,8 +2,6 @@
     width: 100%;
 }
 
-
-
 body {
     background: url("../image/BG.jpg") no-repeat;
     font-family: "Helvetica Neue", sans-serif;
@@ -30,16 +28,14 @@ h1,h2{
     color: white;
     text-align: center;
 }
-img
-{
-max-height: 60%;
-    max-width: 80%;
-    margin: 0;
+
+
+.card{
+    text-align: center;
+    margin: 2%;
 }
 
-card{
-    text-align: center;
-}
+
 .ticket-event {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
@@ -58,5 +54,9 @@ card{
 }
 
 .moreinfo{
-    background-color: #777777;
+
+}
+button{
+    margin: 5%;
+    width: 80%;
 }
