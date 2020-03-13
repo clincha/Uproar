@@ -55,6 +55,7 @@ header {
 nav {
     position: fixed;
     top: 0;
+    z-index:5;
     width: 100%;
     line-height: 60px;
 }
@@ -96,14 +97,6 @@ nav ul li a {
     cursor: pointer;
     color: #fff;
     display: none;
-}
-
-.container {
-    position: relative;
-    margin: calc(5px + 2vh + 2vw) auto 0 auto;
-    padding: 0;
-    width: 100%;
-    max-width: 840px;
 }
 
 .search-box {

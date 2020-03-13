@@ -1,20 +1,49 @@
 <#import "../layout.ftl" as layout>
-
+<h1>My Events</h1>
 <@layout.standardPage; section>
     <#if section = "scripts">
     <#-- javascript tags go in here -->
     </#if>
     <#if section = "styles">
-    <#-- Import your stylesheets here -->
+     <link rel="stylesheet" href="/css/myPages.css">
     </#if>
-    <#if section="content">
-        This hjas enlsnflskdfn
-        <ul>
-            <#list events as event>
-                <li><a href="/event/${event.getId()}">${event.getTitle()}</a></li>
-            </#list>
-        </ul>
 
-        <a href="/event/create">Create an event here</a>
+    <#if section="content">
+        test
+
+            <#list events>
+               <div class="card-columns">
+            <#items as event>
+                <div class="card">
+                    <br>
+                    <img class="card-img-top" src="/file/${event.imageId}" alt="Event Photo">
+
+                    <div class="card-body">
+                        <div class="centre">
+                            <h5 class="card-title">${event.title}</h5>
+
+                            <br>
+                            <div class="moreinfo">
+                                <p class="card-text"><small class="text-muted">
+                                        <a href="/event/${event.id}">More information</a>
+                            </div></div></div>
+                               </div>
+            </#items>
+            </div>
+
+            </#list>
+
+
+        <h2><i>
+         <a href="/event/create">Create an event here</a></i>
+        </h2>
     </#if>
+
+<a style="display:block" href="/">
+<footer>
+    <div class="uproar">
+        Uproar
+    </div>
+</footer>
+</a>
 </@layout.standardPage>
