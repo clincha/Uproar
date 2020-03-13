@@ -61,6 +61,7 @@
 
         <div id="Tickets" class="tab-content content">
             <h3>Tickets</h3>
+
             <div class="card-deck">
                 <div class="card">
                     <img src="../image/Placeholder.jpg" class="card-img-top" alt="...">
@@ -103,6 +104,7 @@
                     </div>
                 </div>
             </div>
+
 
         </div>
 
