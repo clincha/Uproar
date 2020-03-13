@@ -1,8 +1,9 @@
 <#import "layout.ftl" as layout>
 
+
 <@layout.standardPage; section>
+
     <#if section = "scripts">
-        <script type="text/javascript" src="js/quagga.min.js"></script>
         <script src="https://cdn.rawgit.com/serratus/quaggaJS/0420d5e0/dist/quagga.min.js"></script>
 
         <script type="text/javascript">
@@ -116,7 +117,10 @@
             #interactive.viewport {position: relative; width: 100%; height: auto; overflow: hidden; text-align: center;}
             #interactive.viewport > canvas, #interactive.viewport > video {max-width: 100%;width: 100%;}
             canvas.drawing, canvas.drawingBuffer {position: absolute; left: 0; top: 0;}
-        </style>    </#if>
+        </style>
+        <link rel="stylesheet" href="css/scanner.css">
+    </#if>
+
     <#if section="content">
     <#-- This is where the main content of the page would go, this section sits inbetween the body tags -->
         <div class="container">
@@ -126,7 +130,8 @@
                     <div class="input-group">
                         <input id="scanner_input" class="form-control" placeholder="Click the button to scan an EAN..." type="text" />
                         <span class="input-group-btn">
-				<button class="btn btn-default btn-lg" type="button" data-toggle="modal" data-target="#livestream_scanner">
+				<div class="button">
+                            <button class="btn btn-default btn-lg" type="button" data-toggle="modal" data-target="#livestream_scanner"></div>
 					<i class="fa fa-barcode"></i>
 				</button>
 			</span>
