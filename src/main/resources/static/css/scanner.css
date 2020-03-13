@@ -1,0 +1,16 @@
+body{
+    background: url("../image/BG.jpg") no-repeat 20% 20%;
+    height: 100%;
+    text-align: center;
+}
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
