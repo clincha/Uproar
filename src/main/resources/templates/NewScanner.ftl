@@ -2,7 +2,6 @@
 
 <@layout.standardPage; section>
     <#if section = "scripts">
-        <script type="text/javascript" src="js/quagga.min.js"></script>
         <script src="https://cdn.rawgit.com/serratus/quaggaJS/0420d5e0/dist/quagga.min.js"></script>
 
         <script type="text/javascript">
