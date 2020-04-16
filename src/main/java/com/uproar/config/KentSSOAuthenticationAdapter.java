@@ -6,7 +6,6 @@ import org.apache.velocity.app.VelocityEngine;
 import org.opensaml.saml2.metadata.provider.HTTPMetadataProvider;
 import org.opensaml.saml2.metadata.provider.MetadataProvider;
 import org.opensaml.saml2.metadata.provider.MetadataProviderException;
-import org.opensaml.util.resource.ResourceException;
 import org.opensaml.xml.parse.StaticBasicParserPool;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -73,7 +72,7 @@ import java.util.Timer;
 
 @Configuration
 @EnableWebSecurity
-public class AuthConfig extends WebSecurityConfigurerAdapter {
+public class KentSSOAuthenticationAdapter extends WebSecurityConfigurerAdapter {
 
   @Value("${idp.entityId}")
   private String entityId;
@@ -96,6 +95,11 @@ public class AuthConfig extends WebSecurityConfigurerAdapter {
   @Value("${server.ssl.key-alias}")
   private String alias;
 
+  @Bean
+  public static SAMLBootstrap sAMLBootstrap() {
+    return new SAMLBootstrap();
+  }
+
   @Override
   protected void configure(AuthenticationManagerBuilder auth) {
     auth
@@ -105,23 +109,28 @@ public class AuthConfig extends WebSecurityConfigurerAdapter {
   @Override
   protected void configure(HttpSecurity http) throws Exception {
 
-    http.exceptionHandling().authenticationEntryPoint(samlEntryPoint());
+    http.exceptionHandling()
+      .authenticationEntryPoint(samlEntryPoint());
 
-    http.csrf().disable();
+    http.csrf()
+      .disable();
 
-    http.addFilterBefore(metadataGeneratorFilter(), ChannelProcessingFilter.class).addFilterAfter(samlFilter(), BasicAuthenticationFilter.class);
+    http.addFilterBefore(metadataGeneratorFilter(), ChannelProcessingFilter.class)
+      .addFilterAfter(samlFilter(), BasicAuthenticationFilter.class);
 
     http
       .authorizeRequests()
-      .antMatchers("/error").permitAll()
-      .antMatchers("/saml/**").permitAll()
-      .anyRequest().authenticated();
+      .antMatchers("/error")
+      .permitAll()
+      .antMatchers("/saml/**")
+      .permitAll()
+      .anyRequest()
+      .authenticated();
 
     http
       .logout()
       .logoutSuccessUrl("/");
   }
-
 
   @Bean
   public WebSSOProfileOptions defaultWebSSOProfileOptions() {
@@ -226,7 +235,6 @@ public class AuthConfig extends WebSecurityConfigurerAdapter {
     return extendedMetadata;
   }
 
-
   @Bean
   public FilterChainProxy samlFilter() throws Exception {
     List<SecurityFilterChain> chains = new ArrayList<>();
@@ -293,11 +301,6 @@ public class AuthConfig extends WebSecurityConfigurerAdapter {
   }
 
   @Bean
-  public static SAMLBootstrap sAMLBootstrap() {
-    return new SAMLBootstrap();
-  }
-
-  @Bean
   public SAMLDefaultLogger samlLogger() {
     return new SAMLDefaultLogger();
   }
@@ -307,27 +310,21 @@ public class AuthConfig extends WebSecurityConfigurerAdapter {
     return new SAMLContextProviderImpl();
   }
 
-  // SAML 2.0 WebSSO Assertion Consumer
   @Bean
   public WebSSOProfileConsumer webSSOprofileConsumer() {
     return new WebSSOProfileConsumerImpl();
   }
 
-  // SAML 2.0 Web SSO profile
   @Bean
   public WebSSOProfile webSSOprofile() {
     return new WebSSOProfileImpl();
   }
 
-  // not used but autowired...
-  // SAML 2.0 Holder-of-Key WebSSO Assertion Consumer
   @Bean
   public WebSSOProfileConsumerHoKImpl hokWebSSOprofileConsumer() {
     return new WebSSOProfileConsumerHoKImpl();
   }
 
-  // not used but autowired...
-  // SAML 2.0 Holder-of-Key Web SSO profile
   @Bean
   public WebSSOProfileConsumerHoKImpl hokWebSSOProfile() {
     return new WebSSOProfileConsumerHoKImpl();
@@ -355,7 +352,7 @@ public class AuthConfig extends WebSecurityConfigurerAdapter {
 
   @Bean
   @Qualifier("metadata")
-  public CachingMetadataManager metadata() throws MetadataProviderException, ResourceException {
+  public CachingMetadataManager metadata() throws MetadataProviderException {
     List<MetadataProvider> providers = new ArrayList<>();
     providers.add(idpMetadata());
     return new CachingMetadataManager(providers);
@@ -369,5 +366,3 @@ public class AuthConfig extends WebSecurityConfigurerAdapter {
   }
 
 }
-
-
