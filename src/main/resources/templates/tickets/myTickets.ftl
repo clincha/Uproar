@@ -4,6 +4,7 @@
     <#if section = "scripts">
         <script src="https://cdn.jsdelivr.net/jsbarcode/3.6.0/JsBarcode.all.min.js"></script>
         <script src="/js/barcode.js"></script>
+        <script src="/js/sellTicket.js"></script>
     </#if>
     <#if section = "styles">
         <link rel="stylesheet" href="/css/myPages.css">
@@ -31,9 +32,10 @@
                                     <button type="button" class="btn btn-info" href="/event/${ticket.event.id}">
                                         <b>More information</b>
                                     </button>
-                                    <button type="button" class="btn btn-danger" href="/event/sell/${ticket.event.id}">
-                                        <b> Sell Ticket</b>
-
+                                    <button id="${ticket.id}" onclick="onclickSellButton(this.id)" type="button"
+                                            class="btn btn-danger sellTicketButton"
+                                            href="/event/sell/${ticket.event.id}">
+                                        <b>Sell Ticket</b>
                                     </button>
                                 </div>
                             </div>
