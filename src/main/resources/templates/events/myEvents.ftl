@@ -28,13 +28,13 @@
                 <br>
                 <div class="moreinfo">
                     <form action="/event/${event.id}">
-                        <button type="button" class="btn btn-info">
+                        <button type="submit" class="btn btn-info">
                             <b>Event Information</b>
                         </button>
                     </form>
 
-                    <form action="">
-                        <button id="${event.id}" onclick="onclickSellButton(this.id)" type="button"
+                    <form action="/event/${event.id}/scan">
+                        <button id="${event.id}" type="submit"
                                 class="btn btn-secondary sellTicketButton">
                             <b>Scan Tickets</b>
                         </button>
