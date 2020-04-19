@@ -18,7 +18,6 @@
 
         <div class="container-fluid">
         <div class="row">
-            <h1>   My Tickets</h1>
         </div>
         <#list tickets>
             <div class="row">
