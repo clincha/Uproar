@@ -18,3 +18,9 @@ body {
 .buyticket{
     margin: 0 auto;
 }
+
+.paymentform{
+    background-color: white;
+    padding: 5%;
+    border-radius: 2%;
+}

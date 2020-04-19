@@ -1,34 +1,36 @@
 <#import "../layout.ftl" as layout>
-
+<#import "../navbar.ftl" as navbar>
 <@layout.standardPage; section>
     <#if section = "scripts">
     <#-- javascript tags go in here -->
     </#if>
     <#if section = "styles">
-    <#-- Import your stylesheets here -->
+        <link rel="stylesheet" href="/css/eventheader.css">
+        <link rel="stylesheet" href="/css/ufg.css">
+
     </#if>
     <#if section="content">
     <#-- This is where the main content of the page would go, this section sits inbetween the body tags -->
 
-
+        <@navbar.navbar/><br><br><br><br>
         <div class="container">
+            <br><br>
+            <div class="paymentform">
             <div class="py-5 text-center">
                 <h1>Processing Payment</h1>
             </div>
 
+
             <div class="row">
                 <div class="">
-                    <h2 class="">
-                        Your cart
-                    </h2>
                 </div>
             </div>
-
             <form class="" action="/ticket/myTickets">
                 <div class="">
                     <input type="text" class="form-control" placeholder="Promo code">
                     <div class="">
-                        <button type="submit" class="btn btn-primary btn-md my-0 ml-0">Insert discount code</button>
+                        <br>
+                        <button type="submit" class="btn btn-info btn-md my-0 ml-0">Insert Promo code</button>
                     </div>
                 </div>
 
@@ -91,10 +93,7 @@
                         <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
                         <label class="form-check-label" for="debit">Debit card</label>
                     </div>
-                    <div class="">
-                        <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
-                        <label class="form-check-label" for="paypal">PayPal</label>
-                    </div>
+                    
                 </div>
 
                 <div class="">
@@ -174,6 +173,7 @@
                 <input type="text" maxlength="3" placeholder="XXX">
             </div>
 
+        </div>
         </div>
         </div>
         </div>
