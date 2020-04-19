@@ -1,4 +1,5 @@
 <#import "../layout.ftl" as layout>
+<#import "../navbar.ftl" as navbar>
 
 <@layout.standardPage; section>
     <#if section = "scripts">
@@ -8,12 +9,16 @@
     </#if>
     <#if section = "styles">
         <link rel="stylesheet" href="/css/myPages.css">
+        <link rel="stylesheet" href="/css/eventheader.css">
 
     </#if>
     <#if section="content">
+        <@navbar.navbar/><br><br><br><br>
+        <div  class ="article">
+
         <div class="container-fluid">
         <div class="row">
-            <h1>My Tickets</h1>
+            <h1>   My Tickets</h1>
         </div>
         <#list tickets>
             <div class="row">
@@ -58,8 +63,3 @@
     </#if>
 </@layout.standardPage>
 <a style="display:block" href="/">
-    <footer>
-        <div class="upRoar">
-            Uproar
-        </div>
-    </footer>
