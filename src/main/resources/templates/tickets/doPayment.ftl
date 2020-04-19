@@ -28,14 +28,11 @@
             <form class="" action="/ticket/myTickets">
                 <div class="">
                     <input type="text" class="form-control" placeholder="Promo code">
-                    <div class="">
-                        <br>
-                        <button type="submit" class="btn btn-info btn-md my-0 ml-0">Insert Promo code</button>
-                    </div>
-                </div>
 
+                </div>
+                <br>
                 <div class="">
-                    <h2 class="">Billing address</h2>
+                    <h2 class="">Billing Address</h2>
 
                     <div class="form-row">
                         <div class="col">
@@ -58,7 +55,7 @@
 
                     <div class="form-row">
                         <div class="col">
-                            <label for="address2">county</label>
+                            <label for="address2">County</label>
                             <input type="text" id="county" class="form-control" required>
 
                         </div>
@@ -76,13 +73,13 @@
 
                 <div class="form-check pl-0">
                     <input type="checkbox" class="form-check-input filled-in" id="save-info">
-                    <label class="form-check-label" for="save-info">Remember my details</label>
+                    <label class="form-check-label" for="save-info">Remember My Details</label>
                 </div>
 
                 <hr class="">
                 </br>
 
-                <h2 class="">paymentMethod</h2>
+                <h2 class="">Payment Method</h2>
 
                 <div class="">
                     <div class="">
@@ -93,7 +90,7 @@
                         <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
                         <label class="form-check-label" for="debit">Debit card</label>
                     </div>
-                    
+
                 </div>
 
                 <div class="">
