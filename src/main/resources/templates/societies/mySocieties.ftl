@@ -1,4 +1,5 @@
 <#import "../layout.ftl" as layout>
+<#import "../navbar.ftl" as navbar>
 
 <@layout.standardPage; section>
     <#if section = "scripts">
@@ -7,17 +8,15 @@
     </#if>
     <#if section = "styles">
         <link rel="stylesheet" href="/css/myPages.css">
+        <link rel="stylesheet" href="/css/eventheader.css">
     </#if>
+    <@navbar.navbar/><br><br><br><br>
     <#if section="content">
         <div class="row">
-           <div class="title">  <h1>  My Societies</h1> </div>
         </div>
-
-        <br><br>
         <h2>
-
-            <a href="/search"><i>Search for a society.</i></a><br>
-            <a href="/societies/all"><i>Or Create your own!</i></a>
+            <a href="/search"><i>Search for a Society.</i></a><br>
+            <a href="/societies/all"><i>Or Create Your Own!</i></a>
         </h2>
 
         <div class="cards">
@@ -47,9 +46,4 @@
 
     </#if>
 </@layout.standardPage>
-<a style="display:block" href="/">
-    <footer>
-        <div class="upRoar">
-            Uproar
-        </div>
-    </footer></a>
+
