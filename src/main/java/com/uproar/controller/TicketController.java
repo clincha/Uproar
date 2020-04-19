@@ -1,6 +1,5 @@
 package com.uproar.controller;
 
-import com.uproar.entity.Event;
 import com.uproar.service.EventService;
 import com.uproar.service.TicketService;
 import org.springframework.stereotype.Controller;
@@ -18,8 +17,8 @@ import java.util.Map;
 @RequestMapping("/ticket")
 public class TicketController {
 
-  private EventService eventService;
-  private TicketService ticketService;
+  private final EventService eventService;
+  private final TicketService ticketService;
 
   public TicketController(EventService eventService, TicketService ticketService) {
     this.eventService = eventService;
@@ -28,7 +27,7 @@ public class TicketController {
 
   @GetMapping("/buy/{eventId}")
   public ModelAndView buyTicket(@PathVariable Long eventId) {
-    return new ModelAndView("/tickets/buyTicket")
+    return new ModelAndView("/tickets/doPayment")
       .addObject("event", eventService.getEvent(eventId));
   }
 
