@@ -4,24 +4,21 @@
 
 <@layout.standardPage; section>
     <#if section = "scripts">
-        <script src="js/script.js"></script>
+        <script src="/js/script.js"></script>
 
     <#-- javascript tags go in here -->
     </#if>
     <#if section = "styles">
     <#-- Import your stylesheets here -->
         <link rel="stylesheet" href="/css/style.css">
-
+        <link rel="stylesheet" href="/css/eventheader.css">
     </#if>
-
     <#if section="content">
     <#-- This is where the main content of the page would go, this section sits inbetween the body tags -->
-        <@navbar.navbar></@navbar.navbar>
+        <@navbar.navbar></@navbar.navbar><br><br><br><br>
 
         <section id="page-title">
-            <div class="banner-image">
-                <h1> Kent Rugby Presents: the Social</h1>
-            </div>
+            <h1> Kent Rugby Presents: the Social</h1>
         </section>
 
         <section id="main-content">

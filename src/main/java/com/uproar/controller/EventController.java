@@ -15,7 +15,7 @@ import java.io.IOException;
 @RequestMapping("/event")
 public class EventController {
 
-  private EventService eventService;
+  private final EventService eventService;
 
   public EventController(EventService eventService) {
     this.eventService = eventService;
@@ -33,7 +33,7 @@ public class EventController {
 
   @GetMapping("/{id}")
   public ModelAndView getEvent(@PathVariable("id") long id) {
-    return new ModelAndView("events/event")
+    return new ModelAndView("events/events")
       .addObject("event", eventService.getEvent(id));
   }
 
