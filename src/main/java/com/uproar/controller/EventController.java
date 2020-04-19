@@ -49,4 +49,10 @@ public class EventController {
       .addObject("events", eventService.getAllEvents());
   }
 
+  @GetMapping("{id}/scan")
+  public ModelAndView barcodeScanner(@PathVariable("id") long id) {
+    return new ModelAndView("BCScanner")
+      .addObject("event", eventService.getEvent(id));
+  }
+
 }
