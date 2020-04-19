@@ -7,15 +7,18 @@
     <#if section = "styles">
     <#-- Import your stylesheets here -->
         <link rel="stylesheet" type="text/css" href="css/search.css">
+        <link rel="stylesheet" href="/css/eventheader.css">
+        <link rel="stylesheet" href="/css/ufg.css">
     </#if>
     <#if section="content">
 
         <!-- Image and text -->
-        <nav class="navbar navbar-dark bg-dark">
+        <#-- <nav class="navbar navbar-dark bg-dark">
             <a class="navbar-brand" href="#">
                 Navbar to go hear
             </a>
-        </nav>
+        </nav> -->
+        <@navbar.navbar/><br><br><br><br>
 
         <br/>
         <section>
@@ -27,10 +30,11 @@
                 <div class="col-sm-12"></div>
                 <div class="search_box">
                     <input type="text" placeholder="Search Events">
-                    <i class="fa fa-search search-icon"></i>
-                </div>
+                </div><br/>
+                <div class="ufgbox">
                 <div>
-                    <br/>
+
+
                     <div class col-sm-3>
                         <h3 id="filter">Filters</h3>
                         <div class="row">
@@ -293,6 +297,7 @@
                         </p>
 
                         <a href="#" class="btn btn-success btn-lg">Buy Ticket</a>
+                        <button type="button" class="btn btn-info btn-lg">Info</button>
                     </div>
                 </div>
                 <div class="card">
@@ -303,6 +308,7 @@
                         </p>
 
                         <a href="#" class="btn btn-success btn-lg">Buy Ticket</a>
+                        <button type="button" class="btn btn-info btn-lg">Info</button>
                     </div>
                 </div>
                 <div class="card">
@@ -313,6 +319,7 @@
                         </p>
 
                         <a href="#" class="btn btn-success btn-lg">Buy Ticket</a>
+                        <button type="button" class="btn btn-info btn-lg">Info</button>
                     </div>
                 </div>
                 <div class="card">
@@ -321,14 +328,20 @@
                         <h5 class="card-title">Card title</h5>
                         <p class="card-text">This is a wider card with supporting text below...<br/> <a> read more</a>
                         </p>
-
+                        <div class="buyticket">
                         <a href="#" class="btn btn-success btn-lg">Buy Ticket</a>
+                            <button type="button" class="btn btn-info btn-lg">Info</button>
+                            </div>
                     </div>
                 </div>
             </div>
         </div>
+        <br>.
+        </div>
 
-        <button type="button">View More Tickets</button>
+        <div class="viewmore">
+            <button type="button" class="btn btn-dark">View More Tickets</button>
+        </div>
 
     </#if>
 </@layout.standardPage>

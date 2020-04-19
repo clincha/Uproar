@@ -1,0 +1,20 @@
+body {
+    background: url("../image/BG.jpg") no-repeat;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: lighter;
+}
+
+.ufgbox{
+    text-align: center;
+
+}
+.card-deck{
+
+}
+.viewmore{
+    text-align: right;
+    padding-right: 22%;
+}
+.buyticket{
+    margin: 0 auto;
+}
