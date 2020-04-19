@@ -16,7 +16,7 @@ public class MainController {
 
   @GetMapping("/")
   public ModelAndView homepage() {
-    return new ModelAndView("tickets/upforgrabs")
+    return new ModelAndView("tickets/doPayment")
       .addObject("events", eventService.getPopularEvents());
   }
 
