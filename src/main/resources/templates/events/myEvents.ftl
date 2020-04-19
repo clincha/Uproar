@@ -1,16 +1,20 @@
 <#import "../layout.ftl" as layout>
-<h1>My Events</h1>
+<#import "../navbar.ftl" as navbar>
+
 <@layout.standardPage; section>
     <#if section = "scripts">
     <#-- javascript tags go in here -->
     </#if>
     <#if section = "styles">
      <link rel="stylesheet" href="/css/myPages.css">
+        <link rel="stylesheet" href="/css/eventheader.css">
     </#if>
 
     <#if section="content">
-        test
-
+        <@navbar.navbar/><br><br><br><br>
+        <h2><i>
+                <a href="/event/create">Create an event here</a></i>
+        </h2>
             <#list events>
                <div class="card-columns">
             <#items as event>
@@ -34,16 +38,10 @@
             </#list>
 
 
-        <h2><i>
-         <a href="/event/create">Create an event here</a></i>
-        </h2>
+
     </#if>
 
 <a style="display:block" href="/">
-<footer>
-    <div class="uproar">
-        Uproar
-    </div>
-</footer>
+
 </a>
 </@layout.standardPage>

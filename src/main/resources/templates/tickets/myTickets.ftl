@@ -12,8 +12,9 @@
         <link rel="stylesheet" href="/css/eventheader.css">
 
     </#if>
+    <@navbar.navbar/><br><br><br><br>
     <#if section="content">
-        <@navbar.navbar/><br><br><br><br>
+
         <div  class ="article">
 
         <div class="container-fluid">
