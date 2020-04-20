@@ -5,7 +5,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 @Entity
@@ -27,7 +26,8 @@ public class Ticket {
 
   public Ticket(Event event) {
     this.event = event;
-    this.barcode = ThreadLocalRandom.current().nextLong(1000000000000L,999999999999L);
+    this.barcode = ThreadLocalRandom.current()
+      .nextLong(1000000000000L, 9999999999999L);
     this.used = false;
   }
 

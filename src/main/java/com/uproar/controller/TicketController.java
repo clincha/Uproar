@@ -52,8 +52,5 @@ public class TicketController {
   @GetMapping("/success")
   public ModelAndView success() {
     return new ModelAndView("tickets/paymentSuccessful");
-
   }
-
-
 }
