@@ -45,7 +45,7 @@
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-12">
-                        <label for="place">Event Locations</label>
+                        <label for="place">Event Location</label>
                         <textarea id="place" name="place" class="form-control"
                                   placeholder="Enter the full UK address" rows="4"></textarea>
                     </div>
