@@ -25,8 +25,9 @@
             </div>
             <br>
             <div>
-                <h1>${event.title}</h1>
                 <h3 class="page-title">${event.date}  ${event.time} </h3>
+                <img class="card-img-top" src="/file/${event.imageId}" alt="Event Photo">
+                <h1>${event.title}</h1><br>
                 <p>
                     ${event.description}
                    <br>
@@ -38,13 +39,7 @@
             <div>
                 <div class="price-box">
                     <div class="card">
-                        <h5 class="card-header">Event Price: £${event.ticketPrice} </h5>
-                        <div class="card-body">
-                            <h5 class="card-title">Buy Now</h5>
-                            <p class="card-text"></p>
-                            <a href="/ticket/buy/${event.id}" class="btn btn-success btn-lg">Buy Now</a>
-                        </div>
-                    </div>
+                        <h5 class="card-header"><b>Event Price: </b>£${event.ticketPrice} </h5> <a href="/ticket/buy/${event.id}" class="btn btn-success btn-lg">Buy Now</a>
                     <br/>
                     <div>
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2494.754977480543!2d1.061028515762254!3d51.29723297960098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47deca36929a4527%3A0xe17bfa0b0060a838!2sUniversity%20of%20Kent!5e0!3m2!1sen!2suk!4v1573472462343!5m2!1sen!2suk"

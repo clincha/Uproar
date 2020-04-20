@@ -49,4 +49,11 @@ public class TicketController {
     return ticketService.isTicketValid(payload.get("barcode"), payload.get("event_id"));
   }
 
+  @GetMapping("/success")
+  public ModelAndView success(){
+    return new ModelAndView("tickets/successfulPayment");
+
+  }
+
+
 }
