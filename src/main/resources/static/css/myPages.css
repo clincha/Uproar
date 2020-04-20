@@ -7,7 +7,8 @@ body {
     font-family: "Helvetica Neue", sans-serif;
     font-weight: lighter;
 }
-footer{
+
+footer {
     font-size: 50px;
     background-color: white;
     font-family: "Helvetica Neue", sans-serif;
@@ -15,26 +16,24 @@ footer{
     color: black;
     text-align: right;
     position: absolute;
-    right: 0%;
+    right: 0;
     bottom: 0;
     left: 0;
-
-
 }
-h1{
+
+h1 {
     text-align: left;
 }
-h1,h2{
+
+h1, h2 {
     color: white;
     text-align: center;
 }
 
-
-.card{
+.card {
     text-align: center;
     margin: 2%;
 }
-
 
 .ticket-event {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -42,18 +41,21 @@ h1,h2{
 
     padding: 2%;
 }
+
 .title {
     color: grey;
     font-size: 18px;
 }
-.uproar{
+
+.uproar {
     padding-right: 2%;
 }
-.centre{
+
+.centre {
     text-align: center;
 }
 
-button{
+button {
     margin: 1%;
     width: 80%;
 }

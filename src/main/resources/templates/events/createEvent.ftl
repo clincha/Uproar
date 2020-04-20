@@ -1,13 +1,16 @@
 <#import "../layout.ftl" as layout>
+<#import "../navbar.ftl" as navbar>
 
 <@layout.standardPage; section>
     <#if section = "scripts">
 
     </#if>
     <#if section = "styles">
-    <#-- Import your stylesheets here -->
+        <link rel="stylesheet" href="/css/eventheader.css">
+        <link rel="stylesheet" href="/css/createEvent.css">
     </#if>
     <#if section="content">
+        <@navbar.navbar/><br><br><br><br><br>
         <div class="container">
             <form enctype="multipart/form-data" action="/event/create" method="post">
                 <div class="form-row">
@@ -29,8 +32,8 @@
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-12">
-                        <label for="image">Event Description</label>
-                        <input id="image" name="image" type="file" class="form-control"
+                        <label for="image">Event Image</label>
+                        <input id="image" name="image" type="file" class="form-control-file"
                                placeholder="Upload">
                     </div>
                 </div>
