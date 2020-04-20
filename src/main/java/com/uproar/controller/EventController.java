@@ -28,7 +28,8 @@ public class EventController {
 
   @PostMapping("/create")
   public ModelAndView createEvent(EventDao eventDao) throws IOException {
-    return getEvent(eventService.createEvent(eventDao).getId());
+    return getEvent(eventService.createEvent(eventDao)
+      .getId());
   }
 
   @GetMapping("/{id}")

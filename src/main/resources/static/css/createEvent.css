@@ -7,3 +7,7 @@ body {
 button {
     float: right;
 }
+
+label {
+    font-weight: bold;
+}
