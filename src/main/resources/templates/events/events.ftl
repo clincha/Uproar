@@ -20,20 +20,16 @@
     <#-- This is where the main content of the page would go, this section sits inbetween the body tags -->
         <@navbar.navbar></@navbar.navbar> <br><br><br><br><br>
         <div class="article">
-            <div class="search_box"> <#-- search box -->
-                <input type="text" placeholder="Search Events">
-            </div>
-            <br>
             <div>
                 <h3 class="page-title">${event.date}  ${event.time} </h3>
                 <img class="card-img-top" src="/file/${event.imageId}" alt="Event Photo">
                 <h1>${event.title}</h1><br>
                 <p>
                     ${event.description}
-                   <br>
+                    <br>
                     TICKETS £${event.ticketPrice}
                     <br><br> <br><br> <br><br> <br><br> <br><br>
-                    </p>
+                </p>
 
             </div>
             <div>

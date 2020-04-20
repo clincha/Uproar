@@ -1,5 +1,7 @@
 package com.uproar.entity;
 
+import org.hibernate.validator.constraints.Length;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,10 +16,13 @@ public class Event {
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
 
+  @Length(max = 20000)
   private String title;
 
+  @Length(max = 20000)
   private String society;
 
+  @Length(max = 20000)
   private String description;
 
   private Long imageId;
@@ -26,6 +31,7 @@ public class Event {
 
   private LocalTime time;
 
+  @Length(max = 20000)
   private String place;
 
   private Long ticketNumber;
