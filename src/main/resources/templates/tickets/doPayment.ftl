@@ -169,6 +169,9 @@
                 <label>Card CVV</label>
                 <input type="text" maxlength="3" placeholder="XXX">
             </div>
+                <form action="/ticket/myTickets" method="get">
+                    <button class="btn btn-warning" > Confirm Purchase</button>
+                </form>
 
         </div>
         </div>

@@ -33,7 +33,7 @@ public class TicketController {
 
   @PostMapping("/buy/{eventId}")
   public ModelAndView makePayment(@PathVariable Long eventId) {
-    return new ModelAndView("/tickets/DoPayment")
+    return new ModelAndView("/tickets/doPayment")
       .addObject("ticket", ticketService.buyTicket(eventId));
   }
 

@@ -26,14 +26,11 @@
             <br>
             <div>
                 <h1>${event.title}</h1>
-                <h3 class="page-title">Saturday, November 9 at 9 PM – 3 AM</h3>
+                <h3 class="page-title">${event.date}  ${event.time} </h3>
                 <p>
-                    University Of Kent Men's Rugby proudly presents our ANNUAL CASINO NIGHT!
-                    Champagne, Drinks, Roulette, Black Jack and much more at UKC's most prestigious evening.
-                    Your ticket includes entry into the exclusive after party at Venue, for casino night attendees only!
-                    For information about tickets get in touch with any of the Rugby Committee. Or direct message the club.
+                    ${event.description}
                    <br>
-                    TICKETS £10 (after party included)
+                    TICKETS £${event.ticketPrice}
                     <br><br> <br><br> <br><br> <br><br> <br><br>
                     </p>
 
@@ -41,11 +38,10 @@
             <div>
                 <div class="price-box">
                     <div class="card">
-                        <h5 class="card-header">Event Price: £5.00</h5>
+                        <h5 class="card-header">Event Price: £${event.ticketPrice} </h5>
                         <div class="card-body">
                             <h5 class="card-title">Buy Now</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional
-                                content.</p>
+                            <p class="card-text"></p>
                             <a href="/ticket/buy/${event.id}" class="btn btn-success btn-lg">Buy Now</a>
                         </div>
                     </div>
