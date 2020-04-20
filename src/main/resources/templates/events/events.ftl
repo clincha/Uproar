@@ -26,39 +26,17 @@
             <br>
             <div>
                 <h1>${event.title}</h1>
-                <h3 class="page-title">Event Description</h3>
+                <h3 class="page-title">Saturday, November 9 at 9 PM – 3 AM</h3>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius auctor lacus nec feugiat.
-                    Phasellus sit amet ex ipsum. Praesent pharetra
-                    tincidunt tempor. Etiam velit eros, dapibus eget porta in, lacinia et magna.
-                    Nam eget eros non orci consectetur congue at ac augue. Proin eget arcu in enim feugiat
-                    ultricies.
-                    Curabitur maximus metus nec metus pretium viverra at et orci. Integer hendrerit ante ut placerat
-                    cursus.
-                </p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, soluta minus hic repellendus
-                    neque,
-                    dolor similique
-                    dolorum ad dicta aspernatur facere officia fugit praesentium quas nostrum? Veritatis quaerat
-                    consequuntur natus
-                </p>
-                <p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius auctor lacus nec feugiat.
-                    Phasellus sit amet ex ipsum. Praesent pharetra
-                    tincidunt tempor. Etiam velit eros, dapibus eget porta in, lacinia et magna.
-                    Nam eget eros non orci consectetur congue at ac augue. Proin eget arcu in enim feugiat
-                    ultricies.
-                    Curabitur maximus metus nec metus pretium viverra at et orci. Integer hendrerit ante ut placerat
-                    cursus.
-                </p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, soluta minus hic repellendus
-                    neque,
-                    dolor similique
-                    dolorum ad dicta aspernatur facere officia fugit praesentium quas nostrum? Veritatis quaerat
-                    consequuntur natus
-                </p>
-                <p>
+                    University Of Kent Men's Rugby proudly presents our ANNUAL CASINO NIGHT!
+                    Champagne, Drinks, Roulette, Black Jack and much more at UKC's most prestigious evening.
+                    Your ticket includes entry into the exclusive after party at Venue, for casino night attendees only!
+                    For information about tickets get in touch with any of the Rugby Committee. Or direct message the club.
+                   <br>
+                    TICKETS £10 (after party included)
+                    <br><br> <br><br> <br><br> <br><br> <br><br>
+                    </p>
+
             </div>
             <div>
                 <div class="price-box">
