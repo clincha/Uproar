@@ -1,0 +1,9 @@
+body {
+    background: url("../image/BG.jpg") no-repeat;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: lighter;
+}
+
+button {
+    float: right;
+}
