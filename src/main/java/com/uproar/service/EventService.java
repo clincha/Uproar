@@ -11,8 +11,8 @@ import java.io.IOException;
 @Service
 public class EventService {
 
-  private EventRepository eventRepository;
-  private FileStorageController fileStorageController;
+  private final EventRepository eventRepository;
+  private final FileStorageController fileStorageController;
 
   public EventService(EventRepository eventRepository, FileStorageController fileStorageController) {
     this.eventRepository = eventRepository;
@@ -20,7 +20,8 @@ public class EventService {
   }
 
   public Event getEvent(long id) {
-    return eventRepository.findById(id).orElse(null);
+    return eventRepository.findById(id)
+      .orElse(null);
   }
 
   public Event createEvent(Event event) {
@@ -28,8 +29,9 @@ public class EventService {
   }
 
   public Event createEvent(EventDao eventDao) throws IOException {
-    Long fileId = fileStorageController.uploadFile(eventDao.getImage()).getId();
-    return createEvent(new Event(eventDao.getTitle(), eventDao.getSociety(), eventDao.getDescription(), fileId));
+    Long fileId = fileStorageController.uploadFile(eventDao.getImage())
+      .getId();
+    return createEvent(new Event(eventDao.getTitle(), eventDao.getSociety(), eventDao.getDescription(), fileId, eventDao.getDate(), eventDao.getTime(), eventDao.getPlace(), eventDao.getTicketNumber(), eventDao.getTicketPrice()));
   }
 
   public Iterable<Event> getAllEvents() {
