@@ -50,8 +50,8 @@ public class TicketController {
   }
 
   @GetMapping("/success")
-  public ModelAndView success(){
-    return new ModelAndView("tickets/successfulPayment");
+  public ModelAndView success() {
+    return new ModelAndView("tickets/paymentSuccessful");
 
   }
 
