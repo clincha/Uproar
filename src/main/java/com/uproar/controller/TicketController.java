@@ -53,4 +53,10 @@ public class TicketController {
   public ModelAndView success() {
     return new ModelAndView("tickets/paymentSuccessful");
   }
+
+  @GetMapping("/upforgrabs")
+  public ModelAndView ufg() {
+    return new ModelAndView("tickets/upforgrabs");
+  }
+  
 }

@@ -292,8 +292,8 @@
                 <div class="card">
                     <img src="../image/Placeholder.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below...<br/> <a> read more</a>
+                        <h5 class="card-title">Black Tie Poker Night</h5>
+                        <p class="card-text">Black Tie Poker Night hosted by UKC Korean Society<br/>
                         </p>
 
                         <a href="#" class="btn btn-success btn-lg">Buy Ticket</a>
@@ -301,10 +301,10 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="../image/Placeholder.jpg" class="card-img-top" alt="...">
+                    <img src="../image/varsity.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below...<br/> <a> read more</a>
+                        <h5 class="card-title">Varsity UKC Hockey</h5>
+                        <p class="card-text">Come support our boys and girls at the upcomming varsity matches<br/>
                         </p>
 
                         <a href="#" class="btn btn-success btn-lg">Buy Ticket</a>
@@ -312,10 +312,10 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="../image/Placeholder.jpg" class="card-img-top" alt="...">
+                    <img src="../image/varsity.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below...<br/> <a> read more</a>
+                        <h5 class="card-title">VolleyBall Varsity</h5>
+                        <p class="card-text">Come watch us hold onto our 5 year win streak at this year's varsity for Volleyball!<br/>
                         </p>
 
                         <a href="#" class="btn btn-success btn-lg">Buy Ticket</a>
@@ -323,10 +323,10 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="../image/Placeholder.jpg" class="card-img-top" alt="...">
+                    <img src="../image/varsity.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below...<br/> <a> read more</a>
+                        <h5 class="card-title">Womans Football Varsity</h5>
+                        <p class="card-text">UKC Women's football will be putting out 3 teams this year to Play Christ Church<br/>
                         </p>
                         <div class="buyticket">
                         <a href="#" class="btn btn-success btn-lg">Buy Ticket</a>
