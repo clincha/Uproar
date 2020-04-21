@@ -1,7 +1,7 @@
 
 <#import "../layout.ftl" as layout>
 <#import "../navbar.ftl" as navbar>
-<meta http-equiv="refresh" content="5;/" />
+<meta http-equiv="refresh" content="1;/" />
 <@layout.standardPage; section>
     <#if section = "scripts">
     <#-- javascript tags go in here -->

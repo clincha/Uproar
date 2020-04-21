@@ -23,6 +23,7 @@
                 <#list tickets>
                 <div class="row">
                     <#items as ticket>
+                        <div class="ticket">
                         <div class="card">
                             <br>
                             <img class="card-img-top" src="/file/${ticket.event.imageId}" alt="Event Photo">
@@ -46,6 +47,7 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
                         </div>
                     </#items>
                 </div>
