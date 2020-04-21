@@ -27,8 +27,26 @@ public class Ticket {
   public Ticket(Event event) {
     this.event = event;
     this.barcode = ThreadLocalRandom.current()
-      .nextLong(1000000000000L, 9999999999999L);
+      .nextLong(100000000000L, 999999999999L);
+    this.barcode = Long.parseLong(this.barcode + generateEANChecksum(this.barcode));
     this.used = false;
+  }
+
+  static String generateEANChecksum(long barcode) {
+    long[] digits = new long[12];
+    int i = 0;
+    while (i < 12) {
+      digits[i] = barcode % 10;
+      barcode = barcode / 10;
+      i += 1;
+    }
+    int sum = 0;
+    for (int j = 0; j < digits.length; j += 2) {
+      sum += digits[j] * 3 + digits[j + 1];
+    }
+    // Minus the sum from the sum rounded up to the nearest 10
+    sum = (sum + (10 - (sum % 10))) - sum;
+    return String.valueOf(sum);
   }
 
   public Long getId() {
