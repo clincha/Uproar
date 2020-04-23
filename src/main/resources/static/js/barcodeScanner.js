@@ -1,4 +1,7 @@
 $(function () {
+    document.getElementById("validTicket").hidden = true;
+    document.getElementById("invalidTicket").hidden = true;
+
     let liveStreamConfig = {
         inputStream: {
             type: "LiveStream",

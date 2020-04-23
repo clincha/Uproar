@@ -58,5 +58,5 @@ public class TicketController {
   public ModelAndView ufg() {
     return new ModelAndView("tickets/upforgrabs");
   }
-  
+
 }

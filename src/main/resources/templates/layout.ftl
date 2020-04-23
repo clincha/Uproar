@@ -48,7 +48,7 @@
 
 <#macro card title description link linkText>
     <div class="card">
-        <img class="card-img-top" src="image/Placeholder.jpg" alt="Image for ${title}'s event">
+        <img class="card-img-top" src="/image/casino%20night.jpg" alt="Image for ${title}'s event">
         <div class="card-body">
             <h5 class="card-title">${title}</h5>
             <p class="card-text">${description}</p>

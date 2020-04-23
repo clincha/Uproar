@@ -21,7 +21,7 @@
                 <div class="row">
                 </div>
                 <#list tickets>
-                <div class="row">
+                <div class="column">
                     <#items as ticket>
                         <div class="ticket">
                         <div class="card">
@@ -44,14 +44,14 @@
                                                 class="btn btn-danger sellTicketButton">
                                             <b>Sell Ticket</b>
                                         </button>
-                                    </div>
+                                    </div></div>
                                 </div>
                             </div>
                         </div>
                         </div>
-                    </#items>
-                </div>
 
+
+             </#items> </div>
             </div>
             <#else>
                 <br><br>

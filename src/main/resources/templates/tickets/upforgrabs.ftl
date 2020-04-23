@@ -304,7 +304,7 @@
                     <img src="../image/varsity.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Varsity UKC Hockey</h5>
-                        <p class="card-text">Come support our boys and girls at the upcomming varsity matches<br/>
+                        <p class="card-text">Come support our boys and girls at the upcoming varsity matches<br/>
                         </p>
 
                         <a href="#" class="btn btn-success btn-lg">Buy Ticket</a>

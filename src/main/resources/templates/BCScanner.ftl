@@ -53,14 +53,16 @@
         </div>
         </div>
         <input id="eventId" type="hidden" value="${event.getId()}">
-
-        <div id="ValidTicket" class="alert alert-success">
+<footer>
+        <div id="validTicket" >
+            <div class="alert alert-success">
             <strong>Success!</strong> This Ticket is Valid
-        </div>
-        <div id="invalidTicket"class="alert alert-danger">
+            </div></div>
+        <div id="invalidTicket">
+             <div class="alert alert-danger">
             <strong>Failed!</strong> This is not a valid ticket.
-        </div>
-
+        </div></div>
+        </footer>
 
     </#if>
 </@layout.standardPage>
