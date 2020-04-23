@@ -15,7 +15,7 @@ import java.io.IOException;
 @RequestMapping("/event")
 public class EventController {
 
-  private EventService eventService;
+  private final EventService eventService;
 
   public EventController(EventService eventService) {
     this.eventService = eventService;
@@ -28,12 +28,13 @@ public class EventController {
 
   @PostMapping("/create")
   public ModelAndView createEvent(EventDao eventDao) throws IOException {
-    return getEvent(eventService.createEvent(eventDao).getId());
+    return getEvent(eventService.createEvent(eventDao)
+      .getId());
   }
 
   @GetMapping("/{id}")
   public ModelAndView getEvent(@PathVariable("id") long id) {
-    return new ModelAndView("events/event")
+    return new ModelAndView("events/events")
       .addObject("event", eventService.getEvent(id));
   }
 

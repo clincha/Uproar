@@ -1,9 +1,13 @@
 package com.uproar.entity;
 
+import org.hibernate.validator.constraints.Length;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 @Entity
 public class Event {
@@ -12,22 +16,41 @@ public class Event {
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
 
+  @Length(max = 20000)
   private String title;
 
+  @Length(max = 20000)
   private String society;
 
+  @Length(max = 20000)
   private String description;
 
   private Long imageId;
 
+  private LocalDate date;
+
+  private LocalTime time;
+
+  @Length(max = 20000)
+  private String place;
+
+  private Long ticketNumber;
+
+  private Double ticketPrice;
+
   public Event() {
   }
 
-  public Event(String title, String society, String description, Long imageId) {
+  public Event(String title, String society, String description, Long imageId, LocalDate date, LocalTime time, String place, Long ticketNumber, Double ticketPrice) {
     this.title = title;
     this.society = society;
     this.description = description;
     this.imageId = imageId;
+    this.date = date;
+    this.time = time;
+    this.place = place;
+    this.ticketNumber = ticketNumber;
+    this.ticketPrice = ticketPrice;
   }
 
   public Long getId() {
@@ -72,6 +95,46 @@ public class Event {
 
   public void setImageId(Long image) {
     this.imageId = image;
+  }
+
+  public LocalDate getDate() {
+    return date;
+  }
+
+  public void setDate(LocalDate date) {
+    this.date = date;
+  }
+
+  public LocalTime getTime() {
+    return time;
+  }
+
+  public void setTime(LocalTime time) {
+    this.time = time;
+  }
+
+  public String getPlace() {
+    return place;
+  }
+
+  public void setPlace(String place) {
+    this.place = place;
+  }
+
+  public Long getTicketNumber() {
+    return ticketNumber;
+  }
+
+  public void setTicketNumber(Long ticketNumber) {
+    this.ticketNumber = ticketNumber;
+  }
+
+  public Double getTicketPrice() {
+    return ticketPrice;
+  }
+
+  public void setTicketPrice(Double ticketPrice) {
+    this.ticketPrice = ticketPrice;
   }
 
   @Override

@@ -1,4 +1,5 @@
 <#import "layout.ftl" as layout>
+<#import "navbar.ftl" as navbar>
 
 <@layout.standardPage; section>
     <#if section = "scripts">
@@ -6,28 +7,14 @@
         <script src="https://cdn.rawgit.com/serratus/quaggaJS/0420d5e0/dist/quagga.min.js"></script>
     </#if>
     <#if section = "styles">
-        <style>
-            #interactive.viewport {
-                position: relative;
-                width: 100%;
-                height: auto;
-                overflow: hidden;
-                text-align: center;
-            }
+        <link rel="stylesheet" href="/css/myPages.css">
+        <link rel="stylesheet" href="/css/eventheader.css">
+        <link rel="stylesheet" href="/css/bcScanner.css">
 
-            #interactive.viewport > canvas, #interactive.viewport > video {
-                max-width: 100%;
-                width: 100%;
-            }
-
-            canvas.drawing, canvas.drawingBuffer {
-                position: absolute;
-                left: 0;
-                top: 0;
-            }
-        </style>
     </#if>
+    <@navbar.navbar/><br><br><br><br>
     <#if section="content">
+        <div class="bcInput">
         <div class="row">
             <div class="col-lg-6">
                 <div class="input-group">
@@ -64,8 +51,16 @@
                 </div>
             </div>
         </div>
+        </div>
         <input id="eventId" type="hidden" value="${event.getId()}">
-        <h1 id="validTicket" hidden>SUCCESS!</h1>
-        <h1 id="invalidTicket" hidden>FAILURE!</h1>
+
+        <div id="ValidTicket" class="alert alert-success">
+            <strong>Success!</strong> This Ticket is Valid
+        </div>
+        <div id="invalidTicket"class="alert alert-danger">
+            <strong>Failed!</strong> This is not a valid ticket.
+        </div>
+
+
     </#if>
 </@layout.standardPage>

@@ -1,6 +1,10 @@
 package com.uproar.dao;
 
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.multipart.MultipartFile;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 public class EventDao {
 
@@ -12,14 +16,30 @@ public class EventDao {
 
   private MultipartFile image;
 
+  @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
+  private LocalDate date;
+
+  private LocalTime time;
+
+  private String place;
+
+  private Long ticketNumber;
+
+  private Double ticketPrice;
+
   public EventDao() {
   }
 
-  public EventDao(String title, String society, String description, MultipartFile image) {
+  public EventDao(String title, String society, String description, MultipartFile image, LocalDate date, LocalTime time, String place, Long ticketNumber, Double ticketPrice) {
     this.title = title;
     this.society = society;
     this.description = description;
     this.image = image;
+    this.date = date;
+    this.time = time;
+    this.place = place;
+    this.ticketNumber = ticketNumber;
+    this.ticketPrice = ticketPrice;
   }
 
   @Override
@@ -62,5 +82,45 @@ public class EventDao {
 
   public void setImage(MultipartFile image) {
     this.image = image;
+  }
+
+  public LocalDate getDate() {
+    return date;
+  }
+
+  public void setDate(LocalDate date) {
+    this.date = date;
+  }
+
+  public LocalTime getTime() {
+    return time;
+  }
+
+  public void setTime(LocalTime time) {
+    this.time = time;
+  }
+
+  public String getPlace() {
+    return place;
+  }
+
+  public void setPlace(String place) {
+    this.place = place;
+  }
+
+  public Long getTicketNumber() {
+    return ticketNumber;
+  }
+
+  public void setTicketNumber(Long ticketNumber) {
+    this.ticketNumber = ticketNumber;
+  }
+
+  public Double getTicketPrice() {
+    return ticketPrice;
+  }
+
+  public void setTicketPrice(Double ticketPrice) {
+    this.ticketPrice = ticketPrice;
   }
 }
